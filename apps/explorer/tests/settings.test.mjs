@@ -27,9 +27,8 @@ test("untrusted URL values are bounded and unknown presets ignored", () => {
   assert.equal(readSettings("?exposure=999").exposure, 4);
   assert.equal(readSettings("?exposure=").exposure, 2);
 });
-test("reduced motion overrides a playing URL, mobile uses conservative quality", () => {
+test("reduced motion overrides a playing URL", () => {
   assert.equal(readSettings("?paused=0", { reducedMotion: true }).paused, true);
-  assert.equal(readSettings("", { mobile: true }).quality, "mobile-safe");
 });
 test("export is portable package props, with camera disclosure", () => {
   const config = exportConfiguration(defaults);
@@ -38,4 +37,24 @@ test("export is portable package props, with camera disclosure", () => {
   assert.equal(config.props.initialCameraPosition.length, 3);
   assert.match(config.note, /not captured/);
   assert.doesNotMatch(JSON.stringify(config), /\/Users\//);
+});
+
+test("Desktop is the default and replaces legacy Balanced links", () => {
+  assert.equal(readSettings("").quality, "cinematic-ascii");
+  assert.equal(
+    readSettings("?quality=ascii-balanced").quality,
+    "cinematic-ascii",
+  );
+  assert.equal(
+    readSettings("?quality=cinematic-ascii").quality,
+    "cinematic-ascii",
+  );
+  assert.equal(readSettings("?quality=mobile-safe").quality, "mobile-safe");
+  assert.equal(exportConfiguration(defaults).props.quality, "cinematic-ascii");
+  assert.equal(
+    new URLSearchParams(
+      settingsQuery(readSettings("?quality=ascii-balanced")),
+    ).get("quality"),
+    "cinematic-ascii",
+  );
 });

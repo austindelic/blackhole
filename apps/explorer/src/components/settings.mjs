@@ -1,6 +1,6 @@
 export const defaults = Object.freeze({
   camera: "horizon",
-  quality: "ascii-balanced",
+  quality: "cinematic-ascii",
   ascii: true,
   exposure: 2,
   bloom: 0.65,
@@ -23,16 +23,13 @@ export const cameras = {
     forward: [0, -0.152, -0.988],
   },
 };
-export const qualities = ["mobile-safe", "ascii-balanced", "cinematic-ascii"];
+export const qualities = ["mobile-safe", "cinematic-ascii"];
 function number(value, fallback, min, max) {
   if (value === null || value.trim() === "") return fallback;
   const n = Number(value);
   return Number.isFinite(n) ? Math.min(max, Math.max(min, n)) : fallback;
 }
-export function readSettings(
-  search,
-  { reducedMotion = false, mobile = false } = {},
-) {
+export function readSettings(search, { reducedMotion = false } = {}) {
   const p = new URLSearchParams(search);
   return {
     camera: Object.hasOwn(cameras, p.get("camera"))
@@ -40,9 +37,7 @@ export function readSettings(
       : defaults.camera,
     quality: qualities.includes(p.get("quality"))
       ? p.get("quality")
-      : mobile
-        ? "mobile-safe"
-        : defaults.quality,
+      : defaults.quality,
     ascii: p.get("ascii") !== "0",
     exposure: number(p.get("exposure"), defaults.exposure, 0.25, 4),
     bloom: number(p.get("bloom"), defaults.bloom, 0, 2),

@@ -14,7 +14,6 @@ export default function Explorer() {
   const [settings, setSettings] = useState<Settings>(() =>
     readSettings(location.search, {
       reducedMotion: matchMedia("(prefers-reduced-motion: reduce)").matches,
-      mobile: matchMedia("(max-width: 760px)").matches,
     }),
   );
   const [ready, setReady] = useState(false);
@@ -34,7 +33,6 @@ export default function Explorer() {
     setSettings(
       readSettings("", {
         reducedMotion: matchMedia("(prefers-reduced-motion: reduce)").matches,
-        mobile: matchMedia("(max-width: 760px)").matches,
       }),
     );
     setGeneration((n) => n + 1);
@@ -234,8 +232,7 @@ export default function Explorer() {
             }
           >
             <option value="mobile-safe">Low / mobile</option>
-            <option value="ascii-balanced">Balanced</option>
-            <option value="cinematic-ascii">Cinematic</option>
+            <option value="cinematic-ascii">Desktop</option>
           </select>
         </label>
         <label className="range-field">

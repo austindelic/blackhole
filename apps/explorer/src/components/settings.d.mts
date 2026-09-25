@@ -1,7 +1,7 @@
 import type { BlackHoleOptions } from "@austindelic/blackhole/react";
 export type Settings = {
   camera: "horizon" | "elevated" | "close";
-  quality: "mobile-safe" | "ascii-balanced" | "cinematic-ascii";
+  quality: "mobile-safe" | "cinematic-ascii";
   ascii: boolean;
   exposure: number;
   bloom: number;
@@ -19,7 +19,7 @@ export const cameras: Record<
 export const qualities: Settings["quality"][];
 export function readSettings(
   search: string,
-  options?: { reducedMotion?: boolean; mobile?: boolean },
+  options?: { reducedMotion?: boolean },
 ): Settings;
 export function settingsQuery(settings: Settings): string;
 export function rendererProps(settings: Settings): BlackHoleOptions;
