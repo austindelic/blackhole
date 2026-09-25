@@ -4,7 +4,7 @@
   "sourceMain": "590531f771958e2775da1f8e0b4f79efe93fdb2f",
   "originalBranch": "notcodex/windows-asset-validation",
   "originalHead": "cdfefe4566f9ea965f125c078be9175a9512b08d",
-  "sourceRemote": "https://github.com/austindelic/austindelic.git",
+  "sourceRemote": "https://github.com/austindelic/portfolio.git",
   "history": [
     "25fe6a294547d2b9a137222efbb30be6f5d7ecc0 Port full renderer to WebGPU and make it the default",
     "a2f1c4244edb94815cf126988274859480d42bac Increase star density and brightness",

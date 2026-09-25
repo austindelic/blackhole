@@ -10,7 +10,7 @@ images/black-hole-mobile.webp
 Existing black-hole renderer reference artwork copied unchanged from
 apps/portfolio/public/images/black-hole-mobile.webp in Austin Delic's
 portfolio source snapshot. No personal profile content has been copied.
-Upstream portfolio: https://github.com/austindelic/austindelic
+Upstream portfolio: https://github.com/austindelic/portfolio
 Renderer licensing and upstream shader attributions: see the repository's
 LICENSE and NOTICE.md files.
 
