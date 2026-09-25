@@ -1,0 +1,16 @@
+{
+  "name": "blackhole-workspace",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.3.5",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "bun run --filter @austindelic/blackhole build && bun run --filter @austindelic/blackhole-cli build",
+    "test": "bun run --filter @austindelic/blackhole test && bun run --filter @austindelic/blackhole-cli test",
+    "dev": "bun run --cwd apps/explorer dev",
+    "build:explorer": "bun run --cwd apps/explorer build"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "name": "@austindelic/blackhole",
+  "version": "0.1.0",
+  "private": false,
+  "type": "module",
+  "exports": {
+    "./shaders/*": "./shaders/*",
+    "./routes.json": "./routes.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./react": {
+      "types": "./dist/react.d.ts",
+      "import": "./dist/react.js"
+    },
+    "./runtime": {
+      "types": "./dist/components/BlackHoleRuntime.d.ts",
+      "import": "./dist/BlackHoleRuntime.js"
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "generate": "node tooling/webgpu/port-shaders.mjs",
+    "prepack": "npm run build"
+  },
+  "description": "Framework-neutral black hole renderer with WebGL2, WebGPU and React bindings",
+  "license": "GPL-3.0-only",
+  "files": [
+    "dist",
+    "src",
+    "shaders",
+    "routes.json",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE",
+    "fonts"
+  ],
+  "sideEffects": false,
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0",
+    "typescript": "^5.9.3",
+    "@types/react": "^19.2.7",
+    "@webgpu/types": "^0.1.74",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "@types/react-dom": "^19.2.3",
+    "vite": "^7.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austindelic/blackhole.git"
+  },
+  "homepage": "https://github.com/austindelic/blackhole#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}

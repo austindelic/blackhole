@@ -1,0 +1,1566 @@
+{
+  "snapshot": "0013008",
+  "main": "590531f771958e2775da1f8e0b4f79efe93fdb2f",
+  "files": [
+    {
+      "path": ".agents/skills/caveman/SKILL.md",
+      "snapshot": null,
+      "main": "2ab498bd0bc9084496f30659566f0577421c4c3d",
+      "change": "added"
+    },
+    {
+      "path": ".github/workflows/check-infra.yml",
+      "snapshot": "b26621899f37ecd9c5cbec7bea1c97e6a710bd18",
+      "main": "686baa829e16ac50eedff3269c4c43553fb9c457",
+      "change": "modified"
+    },
+    {
+      "path": ".github/workflows/release-tui.yml",
+      "snapshot": "54af14dbfb5d9e58062781b297ff33fa90a24dd0",
+      "main": "d0f8ff515b83b32e0edbe23bb4fdecf07b332b6b",
+      "change": "modified"
+    },
+    {
+      "path": ".github/workflows/windows-diagnostic.yml",
+      "snapshot": "1f18acf12b09f7c7145093c94a8b3c0efcdf4466",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": ".gitignore",
+      "snapshot": "7b285294df31d04dd6694d6493ceee4f2722ee3f",
+      "main": "6a2fd04cbfe91b3e8d81fc32be074a90daf1c68f",
+      "change": "modified"
+    },
+    {
+      "path": "CLAUDE.md",
+      "snapshot": null,
+      "main": "8fb0cd42d24e0d48214dc8dff09883b3b0b6e580",
+      "change": "added"
+    },
+    {
+      "path": "README.md",
+      "snapshot": "34496ce46c332acbee532accc8c25a4634d58c01",
+      "main": "bdc9d65fe71b360a1e34cf4408f681dfd6c9676b",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/.astro/content-assets.mjs",
+      "snapshot": "fe75813c3d99cac5d7f8eb91bc75a4c901bf978f",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/.astro/content-modules.mjs",
+      "snapshot": "2b8b8234b9c67fd770aea6277a0c32a2bf34e05a",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/.astro/data-store.json",
+      "snapshot": "cc3aa8f3873151b5fa52f75307f20922bcaddc79",
+      "main": "1580e1461e8b744e79eec5a7063af0683a0b711a",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/.astro/settings.json",
+      "snapshot": "a13d2f5e90bb92a42f071507508b013a49c000bd",
+      "main": "507fcb5708c76003d7fbb636bfc8bd3016a0cc14",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/README.md",
+      "snapshot": "5138a34859e5725d75b081fb3bf5b398c74070e0",
+      "main": "a68a2721f2db3331ebc4f9ea5315748c6f4c0014",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/astro.config.mjs",
+      "snapshot": "f22064df3dbf1ac8cd50459fdbaa6c4a0f837623",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/astro.config.ts",
+      "snapshot": null,
+      "main": "1c2ce8ee130b8f4cd4a94ccf989392f562e45155",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/package.json",
+      "snapshot": "d44ff324220e4409ce0e6cce06556cf1b6c85491",
+      "main": "3b3e78fa26774d84c21d871a7b45e96e4bc648df",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/performance/README.md",
+      "snapshot": "cd9ab843489eabc7ad0818876a5360a57c4d1d5e",
+      "main": "824256f63960aa72a2e53c43e4c25ee9ce7b5851",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/performance/pass2/README.md",
+      "snapshot": "f936ea974526b39a66a7fbe223a34d9618307e79",
+      "main": "f38c32108e84f614ce072adff50ce2ebf43bc3fa",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/performance/webgpu/README.md",
+      "snapshot": "3d65b525cf1ee86a9cc94bed990858f38df80dc3",
+      "main": "2212338737ab2de7a54f0d7514a60576ddfaeb81",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/public/apple-touch-icon.png",
+      "snapshot": null,
+      "main": "5d69605c52bfddacf066fa0feb12b4209f8aa08b",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/public/browserconfig.xml",
+      "snapshot": "93686a3c7e69783a468ddcf5131f4166c1e254a7",
+      "main": "4fbd2334d133183a2565aaebbd1f107f5299cbf9",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/public/favicon-16x16.png",
+      "snapshot": "b8a068c580d5338205f624ea7fe7aa0a9a66e6fd",
+      "main": "9e6aa331b63717d02e90affa1941c91759378b5c",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/public/favicon-32x32.png",
+      "snapshot": "9422aea5cd72eaaae55339f054c04a1b5d56e022",
+      "main": "47d769f4ceab83cb4686d3ff98a6daa82a76d978",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/public/favicon-48x48.png",
+      "snapshot": "251aaea1be3a1d1f3412d370a99dd4df3211798b",
+      "main": "0d52d78df99d8d55fe71fde21fcd6c70f5ca936d",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/public/favicon.ico",
+      "snapshot": "78b3f13514dd9c1c4b9797ce96d668ee5c063ba3",
+      "main": "d05ccb7a6488bb621cbca2e571535d0d67ad7cc7",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/public/favicon.png",
+      "snapshot": null,
+      "main": "b991ac4dfa03f4fb3b0b47f81985392ff27f4f26",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/public/images/site-and-terminal/browser.webp",
+      "snapshot": null,
+      "main": "4729c99a356f38fab509e72ccbd185fe6a340ace",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/public/images/site-and-terminal/render-pipeline.svg",
+      "snapshot": null,
+      "main": "764655e939d7701b9a3c90f62ac2ad99512a3a33",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/public/images/site-and-terminal/terminal.webp",
+      "snapshot": null,
+      "main": "21b65acdc74daaa106970217ed4c2c76fccc9672",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/audit-routes.js",
+      "snapshot": "233a3789c7b5c35e8a19886f52437d036d1fce8a",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/audit-routes.ts",
+      "snapshot": null,
+      "main": "7400b8abc79e50c594f018894c2d025c4579a95b",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/backend-session.test.mjs",
+      "snapshot": "683d1e7184bf70d94b79a9d5847128a08e7089d6",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/backend-session.test.ts",
+      "snapshot": null,
+      "main": "23131d14ee484f1176ec6356eadc74ff737b7467",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/browser-types.d.ts",
+      "snapshot": null,
+      "main": "64120e1b4f916ce857dc2be236f3e53464bbd59f",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/bundle-report.mjs",
+      "snapshot": "4da012b7fb377620da5b6f7575dfc338c1fae431",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/bundle-report.ts",
+      "snapshot": null,
+      "main": "343c7dda8a91faf478ecd580fd19700e2de865e3",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/capture-editor.js",
+      "snapshot": "e0ad55287351c6ee316bcaccef21694cc1433555",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/capture-editor.ts",
+      "snapshot": null,
+      "main": "8c169c38f3bccf8c9b9ede38da8c6a9d9ff1b864",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/capture-routes.js",
+      "snapshot": "9589d7279e70bf1646087cacf0856626f079c720",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/capture-routes.ts",
+      "snapshot": null,
+      "main": "d8f0a1c6c78bd8d9975c57a9f6f47da53f45c59b",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/capture-settings.js",
+      "snapshot": "7f8e6b901ea306b8145d7fa7a2cb7af4c9d3a24d",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/capture-settings.ts",
+      "snapshot": null,
+      "main": "197854e47c675b0b861b263a4674189db73b86f4",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/capture.js",
+      "snapshot": "58624bb3214b558e08f2e4ddd77abf1a003753bf",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/capture.ts",
+      "snapshot": null,
+      "main": "fa2056623db2de196ae8b1722e7e77dbdd8ef408",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/compact-shaders.test.mjs",
+      "snapshot": "a98d93f8dce7635997bde969b5fbdcb6e0cd4e45",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/compact-shaders.test.ts",
+      "snapshot": null,
+      "main": "82df6fcae889eb229e395aa7a9603a47ec00f125",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/compilation-lifecycle.js",
+      "snapshot": "c2070778a496c7fa108096e8d764769896ecfae5",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/compilation-lifecycle.ts",
+      "snapshot": null,
+      "main": "153f013fa2a1cb7dcf59f10b43a5e67a84de6224",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/compilation.test.mjs",
+      "snapshot": "8cafae82502993b7544938ef78a607d38c59f815",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/compilation.test.ts",
+      "snapshot": null,
+      "main": "987d5e4f272402a9c9c90939e49f777a21f2b4b4",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/drift-flow.js",
+      "snapshot": "b1a8df4e6d389ba876daa680f99f83853041d5d3",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/drift-flow.ts",
+      "snapshot": null,
+      "main": "8d203e18e30d671deff1c4c82b17922ff53b6089",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/exploration.test.ts",
+      "snapshot": null,
+      "main": "303dfc2eb58e55cd25b0eb34ba6719da55e7e39f",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/failure-paths.js",
+      "snapshot": "726094716135513b6f97366d7a38af1aad3f31dc",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/failure-paths.ts",
+      "snapshot": null,
+      "main": "1beec09ceecf4ee7cb30bc517a2c7529bc52a047",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/flows.js",
+      "snapshot": "7db5cbd7c3bb2431f4da6258145c69990cb4b2db",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/flows.ts",
+      "snapshot": null,
+      "main": "659f18e858b926dd4c663dd5ab9d1b006f84e148",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/font-dpr.js",
+      "snapshot": "04cb79eeba1aace34c54feda410d6db11a7a10dc",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/font-dpr.ts",
+      "snapshot": null,
+      "main": "ce3195abdbd69d95353ff381886edcd52108fd4e",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/imports.test.mjs",
+      "snapshot": "17e6edd3034d46ffe098fc08f10a651fc699279d",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/imports.test.ts",
+      "snapshot": null,
+      "main": "ca7863391a36933a80ea272c0161ee029e4b0d70",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/intro-flow.js",
+      "snapshot": "5049f7ec1abf74d1cf0246554e431ffbea1392cb",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/intro-flow.ts",
+      "snapshot": null,
+      "main": "ef1ee0c762ce041d9853edce98a4b93626caef26",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/intro-interruption.js",
+      "snapshot": "576a1c00e2a2fa20814ab98b11c33888c92c2c57",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/intro-interruption.ts",
+      "snapshot": null,
+      "main": "845feb283684537d2775a2df06c442302e3d37fb",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/measure-completion.js",
+      "snapshot": "d52be3f8a341085eaffa14d14f972293c08dc43f",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/measure-completion.ts",
+      "snapshot": null,
+      "main": "d8420810c2fca6ae88349cd3af5b0412e3f904e9",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/measure-interleaved.js",
+      "snapshot": "272e0e37da29f9a8448bdb4f14204f8ad544fa24",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/measure-interleaved.ts",
+      "snapshot": null,
+      "main": "04c5f96b0f04b18b1954f437387f25f321d2c82c",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/measure-public.js",
+      "snapshot": "2f67b64f2965c750bd978fc5b9cce58f623a3467",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/measure-public.ts",
+      "snapshot": null,
+      "main": "40ed95f453950ddc7d90b468255e1694b1703494",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/measure-startup.js",
+      "snapshot": "33258b04c91a3dee636e72a2d3990f156fb9ac1b",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/measure-startup.ts",
+      "snapshot": null,
+      "main": "f478b86a20388abc5864d9e8c9309b23a736620a",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/measure.js",
+      "snapshot": "69100e7f8930d9d9012e893a73de19cfc5fca511",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/measure.ts",
+      "snapshot": null,
+      "main": "090f35fa06d044d95b70a67e968c78390e666892",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/mobile-background.js",
+      "snapshot": "af8a93e0b2fea3469478e4445bc012d35f2785c4",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/mobile-background.test.mjs",
+      "snapshot": "91223cae2ac6cf6daefe0b53c30a3520566d0d99",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/mobile-background.test.ts",
+      "snapshot": null,
+      "main": "02ab921fe84c32f8ffffb23458f255be37addf4f",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/mobile-background.ts",
+      "snapshot": null,
+      "main": "8536541568dd9fc7f8b3746604b610a4a5305023",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/optional.js",
+      "snapshot": "33ec30b7119f05e1464b7b9c5414ef7548c61e32",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/optional.ts",
+      "snapshot": null,
+      "main": "5da7e832eb8b6c04401166d75c88ddf09f89a528",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/orbit-flows.js",
+      "snapshot": "67404dc7c110f39585fc971ea79f8111327ea679",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/orbit-flows.ts",
+      "snapshot": null,
+      "main": "2d670a7f6914650e16056c6d3ecb5252def1a0d4",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/orbit.test.mjs",
+      "snapshot": "8169dc5fa29a9c754381ebb69cde96c2fdc7bf80",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/orbit.test.ts",
+      "snapshot": null,
+      "main": "472d9e7628d70e9d97ba20c0548c278e1e030c38",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/profile-ascii.js",
+      "snapshot": "50a9852db8989b2b51d0dae68b0cf691c94755b6",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/profile-ascii.ts",
+      "snapshot": null,
+      "main": "6bc6145006113343127f07f06287430880e9c817",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/profile-completion.js",
+      "snapshot": "a2808f63728dceb1d0361d5cc9df8f1cf476b42b",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/profile-completion.ts",
+      "snapshot": null,
+      "main": "062b8ea84cd05201d5f81a734236a4d19c4f7131",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/profile-passes.js",
+      "snapshot": "34e62c2ad7ff446d18ab93b49cbf107bcc164907",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/profile-passes.ts",
+      "snapshot": null,
+      "main": "5f3f06b6bb8c8ee51ff80af37be91c6e408a8c49",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/results-pass2.mjs",
+      "snapshot": "c39c3c4fef5b09d762d8e6a9c6d7f04c57009f27",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/results-pass2.ts",
+      "snapshot": null,
+      "main": "50c76bc5c6de2a913740f7071489cc1ada951af1",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/rotation-flow.js",
+      "snapshot": "666bbf3e61580d3a3d324569daf19d811f8f76c3",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/rotation-flow.ts",
+      "snapshot": null,
+      "main": "e85be6de8fd66fd6c565c0a0aa62179c0e577b89",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/runtime.test.mjs",
+      "snapshot": "d76ee3d329058ba7805d17ded7e9da5bc4997a25",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/runtime.test.ts",
+      "snapshot": null,
+      "main": "c26a207a825e9a9f7bc3b0a6ef5d6968d529f48b",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/summarize.mjs",
+      "snapshot": "5e0db795687f6d7018c8760c134fb151463749c5",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/summarize.ts",
+      "snapshot": null,
+      "main": "f8279f8c6206ba31ccb3c80fdea7ecc55c217e79",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-camera.js",
+      "snapshot": "eb03114120d877b31bfc843d6eb6c20a06cc5758",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-camera.ts",
+      "snapshot": null,
+      "main": "691a46ccee351ad116c1baa56989d341188b3b00",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-editor.js",
+      "snapshot": "0711353b3c0f9f188e4b1ee8a729999c25df4c0d",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-editor.ts",
+      "snapshot": null,
+      "main": "c4caa7b81f056893c2f08d9cd487e99c98aad0bf",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-intermediates.js",
+      "snapshot": "4aea3441451f44b380b11397d11f21b186bffe0a",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-intermediates.ts",
+      "snapshot": null,
+      "main": "420d40ea942c0052b6fa1c89042bc0437385d86e",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-lifecycle.js",
+      "snapshot": "12524a1f8e3f09493f7d9b8b566ce9415603111b",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-lifecycle.ts",
+      "snapshot": null,
+      "main": "2c66d7ea9f87f8e5358ecde2a8617272767693f3",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-measure-report.mjs",
+      "snapshot": "cf235817d72aad2e712e640519a3e730683d34b8",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-measure-report.ts",
+      "snapshot": null,
+      "main": "87e15c596adc884651cbc53110a8c28b1c1729c1",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-measure.js",
+      "snapshot": "8c0e803244f4044208cdd94063483a054d984e87",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-measure.ts",
+      "snapshot": null,
+      "main": "4f12b1e22791b625b93ae34be96c9c4e2681a481",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-parity.js",
+      "snapshot": "5ea0cc40d12d92c48171a5a222c7a368d94a3ffd",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-parity.ts",
+      "snapshot": null,
+      "main": "286f51c3fda9bf4865c7b965862346e3d1bef649",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-report.mjs",
+      "snapshot": "2e0c5adc581edbf63991614ae262152cd409f7aa",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/scripts/perf/webgpu-report.ts",
+      "snapshot": null,
+      "main": "4b893c05f75167188f95782c19a6d11417fe0f1e",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/src/components/BaseHead.astro",
+      "snapshot": "703f0b3bd26ddd3d135cc01e9f90735a658692f1",
+      "main": "558c94982773ccaf504b9d7f6fb5229f6c5cafc0",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/components/BlackHoleRuntime.ts",
+      "snapshot": "4323db7a17332279d4ac866e31890515fe7e988e",
+      "main": "40642ef33d6aa0deede27082a94536806e9d69db",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/components/PostPreview.astro",
+      "snapshot": "794c5488183fb7d7c7d573d7e710e7102c05e02f",
+      "main": "4ba33a7d16b5a8782aff125945f2ea000981337e",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/config.ts",
+      "snapshot": "1d3c04f01092fdc6f7e45ff69469b65a3f55edc8",
+      "main": "acecd2ad1da3293a07f031bdce49d4af08352b79",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/content/blog/building-tactify/index.md",
+      "snapshot": "6bb3df672388f3cb5833b6eba2185b81a3380dcf",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/src/content/blog/contracts-in-rust-and-cpp/index.md",
+      "snapshot": null,
+      "main": "1570baacfafc2336a53841f9eecc4ee01b159447",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/src/content/blog/example/bluemarble.jpg",
+      "snapshot": "3ce7538f189dfffb6159c53fc9acf21c539b1505",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/src/content/blog/example/index.md",
+      "snapshot": "91f953a339b401b3d080fdf235691b0ad7eff645",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/src/content/blog/production-systems-notes/index.md",
+      "snapshot": "9e406fa5a1e6eaad07c0d1a40054f1b99e3c1852",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/src/content/blog/site-and-terminal/index.md",
+      "snapshot": null,
+      "main": "7b9c48fa2831fd265f11faecf5e427d01cf893dc",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/src/content/blog/still-and-desired-state/index.md",
+      "snapshot": "88fb8d9b290bf156b511fb2c3c208a88456c15f6",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/src/content/config.ts",
+      "snapshot": "b430bc5bb6251eebce83a3a68f665773e6888192",
+      "main": "3883c6af4cac2b85b059b30c341bdd1160d05c08",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/data/portfolio.json",
+      "snapshot": "c62e0f8faaf89cd18708f121b314b52bc4c5cdbf",
+      "main": "36eef0fd2797e6abb2cb65ae0ac7cc3846f228ae",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/layouts/PostLayout.astro",
+      "snapshot": "59b9daa5cd240eb2609b46b559aa0c825ffd61e0",
+      "main": "99ea529272e49ce3af93463c54f2be1cfc75d32d",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/pages/404.astro",
+      "snapshot": "a9cc8a30ca567ba1153a47118ce202af3e8bf903",
+      "main": "f050349ec183cdd1b2bc94e835ce2ea73ed47883",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/pages/blog/[slug].astro",
+      "snapshot": "49ef7ae84b244b493d6eb81e329f72f1799baa23",
+      "main": "faa1bdf2633fb8e88686891a7371d52fc35cde26",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/pages/blog/index.astro",
+      "snapshot": "cec77bc5ad9f267253df891a1a6549a52bb83c1b",
+      "main": "0c8824e7e0e12bebe3053a1c50dc5901839171f7",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/pages/index.astro",
+      "snapshot": "6dd2fe8d4967c3e1f9e4e4117c11d14102ef55bc",
+      "main": "01400d4de305e7530a15baf8ff98021b165f5b70",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/pages/socials.astro",
+      "snapshot": "ce14eba38de377907a3c74217e10be4c18b73036",
+      "main": "48f5718dcf21d3a7e1ac1a6694f950f3491c4338",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/styles/global.css",
+      "snapshot": "a81d908095e1f82719eb26a7444b33994917824c",
+      "main": "3008789c7c8a93e447e78c9e985022008f168663",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/src/utils/index.ts",
+      "snapshot": "1bc90132d99c3703b5329e1311f598d5617a8168",
+      "main": "92fef38ee05cdfa04f918d9d9b611654110fb4f7",
+      "change": "modified"
+    },
+    {
+      "path": "apps/portfolio/tests/ascii-analysis.browser.cjs",
+      "snapshot": "191b205f7694ec7780419a87a85a7cecf9927b2c",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/tests/ascii-analysis.browser.ts",
+      "snapshot": null,
+      "main": "2354799db02614d8e0db2fa436192eb37bb53c04",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/tests/explore-settings.browser.cjs",
+      "snapshot": "4cb54df12eafa6a7032b8e124035a1e6682d60c1",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/tests/explore-settings.browser.ts",
+      "snapshot": null,
+      "main": "47628508252889232265d74bac596c25ec379665",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/tests/quality-presets.browser.cjs",
+      "snapshot": "95272f12bc6a6b6dec64492482ed0b7c21b844d3",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/tests/quality-presets.browser.ts",
+      "snapshot": null,
+      "main": "85373e61c0352065a066d5fe93b58bdc5079e3ea",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/tooling/assets.d.ts",
+      "snapshot": null,
+      "main": "8e6dc861ff1a3d438fe505a3f8a58292c0866be5",
+      "change": "added"
+    },
+    {
+      "path": "apps/portfolio/tooling/compact-shaders.mjs",
+      "snapshot": "7cc198f00407579e918fcbeaa37db59442cd8c4c",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/portfolio/tooling/compact-shaders.ts",
+      "snapshot": null,
+      "main": "b13c8655f6a8ec87917d01c99d22e71ed080a7a2",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/README.md",
+      "snapshot": "b28d8a2ac8bd8630374efe5f7ee5cac1afbbf6c4",
+      "main": "4465b16369b8cd2e3e17f7afd8aa7c1e32ffa7ea",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/VALIDATION.md",
+      "snapshot": "6e6b5865bbca95de0813a7947a38f26383afff31",
+      "main": "21b03bf6dda1b7270eae5dbb8ed46bd6671fdb63",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/assets-manifest.json",
+      "snapshot": "83ddc81d541c6cea2b5cc3c461cb9da66ce7294b",
+      "main": "f43289aaa0a6c163881c5eb4b67fdc9ddfed43f7",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/cli/examples/pty-smoke.rs",
+      "snapshot": "6a19cebc2e84ae8825a2f8a9d2417ccd9f113c0a",
+      "main": "4839410e27ab8890dfb39017b0a1da8aaf72d943",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/cli/src/main.rs",
+      "snapshot": "a761297f67b8f04c0c2f301508e1f9751d0402f2",
+      "main": "e524a4c6549c79b07ba74b7904c001444b743018",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/core/assets/portfolio.json",
+      "snapshot": "c62e0f8faaf89cd18708f121b314b52bc4c5cdbf",
+      "main": "36eef0fd2797e6abb2cb65ae0ac7cc3846f228ae",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/core/assets/posts/building-tactify.md",
+      "snapshot": "6bb3df672388f3cb5833b6eba2185b81a3380dcf",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/core/assets/posts/contracts-in-rust-and-cpp.md",
+      "snapshot": null,
+      "main": "1570baacfafc2336a53841f9eecc4ee01b159447",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/core/assets/posts/example.md",
+      "snapshot": "91f953a339b401b3d080fdf235691b0ad7eff645",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/core/assets/posts/production-systems-notes.md",
+      "snapshot": "9e406fa5a1e6eaad07c0d1a40054f1b99e3c1852",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/core/assets/posts/site-and-terminal.md",
+      "snapshot": null,
+      "main": "7b9c48fa2831fd265f11faecf5e427d01cf893dc",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/core/assets/posts/still-and-desired-state.md",
+      "snapshot": "88fb8d9b290bf156b511fb2c3c208a88456c15f6",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/core/build.rs",
+      "snapshot": "db88edc131c7f4d37beae6f4fda48e348ca132df",
+      "main": "8b50faeb7e0ba0fc7ed8bfc1d3b24e716cc8b87d",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/core/src/portfolio.rs",
+      "snapshot": "82212785971d02d376b67574122542c13a63d1f9",
+      "main": "4e8ce8fd9e11be2a68aa89df7e231b1d5e8d7eb5",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/core/tests/fixtures/portfolio.json",
+      "snapshot": null,
+      "main": "36eef0fd2797e6abb2cb65ae0ac7cc3846f228ae",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/core/tests/fixtures/posts.json",
+      "snapshot": null,
+      "main": "491a54b1ed84aafd9e7e583dae19b8bb532c5b7f",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/core/tests/snapshots/home-120x40.txt",
+      "snapshot": "90e2e44d944444c0e2e943a796276fe9e70d41be",
+      "main": "367fb1a9181d0c822e3061769725d28df110820e",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/core/tests/snapshots/home-160x50.txt",
+      "snapshot": "3525766d1ba913f2667b181e7f9915f77b9d4f1b",
+      "main": "481f5fc9275b53e155dfbde2143ea7b5450685bb",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/core/tests/snapshots/home-60x18.txt",
+      "snapshot": "657f2691ca4cc3d2eaf9805a228ce1e69712d2c0",
+      "main": "8e80b847c57438e9efec3ad87a0388035ceb7b93",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/core/tests/snapshots/home-80x24.txt",
+      "snapshot": "421558b6372ddb7361547186b46ff4464c42d770",
+      "main": "57cb81e4a928282fb0aa82daa15a31b2e21e06fd",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/core/tests/snapshots/post-120x40.txt",
+      "snapshot": "1216731cf364955bee6c5aff65d30de803f857cb",
+      "main": "6f9b21d8fab5d2a26b44234c7c14c4104eba31dd",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/core/tests/snapshots/post-160x50.txt",
+      "snapshot": "cd503ef582e79e83c141cc47af4f353b94e696e7",
+      "main": "8bc50c283547a505646f57b11d03415b777f3360",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/core/tests/snapshots/post-60x18.txt",
+      "snapshot": "4e274059fe3cf255c5703adbbd58b28b7acd69ad",
+      "main": "49fa591c573de6f5f1fc167b26a09d5b433acae2",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/core/tests/snapshots/post-80x24.txt",
+      "snapshot": "fea0213763605628f97d978bc4a85d2e36db7c6f",
+      "main": "2ed6902f68c73f7c65923908511aa85317e09a21",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/mise.toml",
+      "snapshot": "ddb07384a26f55df01b57ba28ced5ed6c07a3413",
+      "main": "184d7cdc6db9869a792e07616b90f2cdcd72ffa9",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/npm/README.md",
+      "snapshot": "5e712f57a852613fb218df4d68312b007bda1784",
+      "main": "d71101d5bf5b7642d3131111f00855430cb00cd9",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/npm/bin/cli.cjs",
+      "snapshot": "6be65aa0f09d318990e94fff53aac5ef4b6a8cbd",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/npm/bin/cli.ts",
+      "snapshot": null,
+      "main": "90117bf204265554d92386a8de8d7b2c5c7d4b0d",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/npm/package.json",
+      "snapshot": "2d9aff79e58b7db87e46318d0bc4c3c8e1de871a",
+      "main": "3ca50eeeea561807a59282afd5f03375249ba3d0",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/release/README.md",
+      "snapshot": "8343c4b5ba479b43d26a5387e276863cd1c58f77",
+      "main": "d89edb727dea05f6b8234b3498464b6830f340f3",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/release/bundle.mjs",
+      "snapshot": "26164e5c7e60d1496158df2282786080036a3490",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/release/bundle.ts",
+      "snapshot": null,
+      "main": "3bd087ff9ee8deda33a5a342ce2bcefd6ab6e176",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/release/package-lock.json",
+      "snapshot": "54263edfd98a2f867de549d9bbeb7062fa6b5219",
+      "main": "5598be49dbcf4e927f7794f9616b9a6515d7dd35",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/release/package.json",
+      "snapshot": "c37bc75bfdd634161abf35d66e2425548d151774",
+      "main": "d0e285d5409c427864ac39d9bb1ba1b47ff49869",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/release/paths.mjs",
+      "snapshot": "a544bc6ff9135267e658271c87a0ec3f262b1797",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/release/paths.ts",
+      "snapshot": null,
+      "main": "290c2492d36b0bbd6f383684b21128dfb2536d91",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/release/plugin-types.d.ts",
+      "snapshot": null,
+      "main": "f3f0f46d6e20c11b74b196adf46ed69789a4e27a",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/release/plugin.mjs",
+      "snapshot": "80937f43416444a627ee01283809bc4d8f09a7d1",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/release/plugin.ts",
+      "snapshot": null,
+      "main": "f2695accfb5df330384d755eaad94c78f4ed67d9",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/release/publish-snapshot.ts",
+      "snapshot": null,
+      "main": "e209f4781537c757094a7021caa7d39b778548d3",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/release/recover.mjs",
+      "snapshot": "f3038f094b18ada2774f76280371530504aa0b0e",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/release/recover.ts",
+      "snapshot": null,
+      "main": "14b0a84a6d723547ef28cfac54500301b5b00d50",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/release/run.mjs",
+      "snapshot": "5728713a5721b656545c4d5baf78b6e117688ba0",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/release/run.ts",
+      "snapshot": null,
+      "main": "67378a539adbc30cf8fd7c52fcf779e84d1bd36e",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/release/tests/packages.test.mjs",
+      "snapshot": "1d04725edbe2a3dd101195ddc33471ad1d870c8b",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/release/tests/packages.test.ts",
+      "snapshot": null,
+      "main": "0a2cea9b721c77b2b1410aa3b7d2fe2100489337",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/release/tests/release.test.mjs",
+      "snapshot": "81cb004a9f4d75e16be5c107e0a9dec72e62acec",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/release/tests/release.test.ts",
+      "snapshot": null,
+      "main": "0d81ffa5fe67e1d8e95a891c7a1758fedcc7cc8a",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/release/tests/snapshot.test.ts",
+      "snapshot": null,
+      "main": "ccdeb013098e6b2c80d1a258eca3afca04ba6bca",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/release/tsconfig.json",
+      "snapshot": null,
+      "main": "1c031793c16a1c3a6891668bc3d88a39aad40199",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/release/version.cjs",
+      "snapshot": "7ac8d337b6ea8050385cad187eac65f4e897b147",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/release/version.ts",
+      "snapshot": null,
+      "main": "da9f88b26be6c52dad676ee5af0bbc38ac6eb2b2",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/renderer/src/lib.rs",
+      "snapshot": "bf3364995b9bfd964680e8e1ab5319bdde24f4ae",
+      "main": "19ee3d01affe668f9df2759f07d2296f132f71ad",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/scripts/build-launcher.ts",
+      "snapshot": null,
+      "main": "343472506017c40b44cc3737c4d2aa99afd93020",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/scripts/check-npm-package.cjs",
+      "snapshot": "76042cd96c58a622d868f70f6d92a5f3cbba1849",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/scripts/check-npm-package.ts",
+      "snapshot": null,
+      "main": "c8853907bd886b3290ff8c8db8bd8be2e5ee3577",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/scripts/glyph-metrics.js",
+      "snapshot": "f68c8a80b9b14efa316212c8897bde8e690ae3f8",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/scripts/glyph-metrics.ts",
+      "snapshot": null,
+      "main": "d332caa238206f8d52eefdbcf1f9088fd4dc2575",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/scripts/pack.cjs",
+      "snapshot": "aa938c46d5f844abadb465f32a8103a3b8db7a53",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/scripts/pack.ts",
+      "snapshot": null,
+      "main": "cf7b352a84454f8adaaae740e40a3a0810b74af7",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/scripts/publish.cjs",
+      "snapshot": "90fdd0579d7cfca92327896466c74205cc4b6b34",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/scripts/publish.ts",
+      "snapshot": null,
+      "main": "32cae0b4258136b16c9ee097fc7fc8c0981987ec",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/scripts/release-types.ts",
+      "snapshot": null,
+      "main": "b52eb2141e0cd9b91d8bff47398aae37c84a6daa",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/scripts/size-budgets.json",
+      "snapshot": "a9f3c5b65d4337879972d0aa0004e189afe19cfd",
+      "main": "7d10af0decf56806941aa73603f36ffb7f652916",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/scripts/smoke.py",
+      "snapshot": "25d378a3f0a6f26d305b89c8a74dbf41f44963d8",
+      "main": "bea906956ffb5484725c3db4530eb4258aa9c017",
+      "change": "modified"
+    },
+    {
+      "path": "apps/tui/scripts/sync-assets.mjs",
+      "snapshot": "ea7ca636f4ca558820620867e0f742f6cb18087b",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/scripts/sync-assets.ts",
+      "snapshot": null,
+      "main": "750599d0b1e82f38fe344b2e533db99a35ae9e50",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/scripts/test-packed.cjs",
+      "snapshot": "9350f8e35c0ec117e2f374d74a26d550a532801b",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/scripts/test-packed.ts",
+      "snapshot": null,
+      "main": "d506448e6dbab7664010f512e0b09789469205b7",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/scripts/test-platform-selection.cjs",
+      "snapshot": "590a2a8b2c380ba2a7dbafe65ae43b0859c55b78",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/scripts/test-platform-selection.ts",
+      "snapshot": null,
+      "main": "21267a3095058583e4053bac3fed981e3da12084",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/scripts/test-registry.cjs",
+      "snapshot": "27e7b1eba7ef8527d2b4434918ca4b56ba01fd1c",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/scripts/test-registry.ts",
+      "snapshot": null,
+      "main": "a63f752ead2629bf71d7285da3d21179d8e975dc",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/scripts/tests/npm-launcher.test.cjs",
+      "snapshot": "7bf47bafdee83fb859c75d6ded1ae0b264928a5d",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/scripts/tests/npm-launcher.test.ts",
+      "snapshot": null,
+      "main": "8079b58f42d235fea174fc74f948bd775313fade",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/scripts/web-check.js",
+      "snapshot": "327d8ea4892810e1dddcdf66c0c8ae05515c9413",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "apps/tui/scripts/web-check.ts",
+      "snapshot": null,
+      "main": "ed7a8246d4eff7bf8d4fc0e945c01a1950495b39",
+      "change": "added"
+    },
+    {
+      "path": "apps/tui/size-measurements.json",
+      "snapshot": "a768b3f41223eb85e643fec1cc08cebb438476bd",
+      "main": "65c8b5994c585e7c0b49189bc907b797c487a00f",
+      "change": "modified"
+    },
+    {
+      "path": "assets/readme/ARTWORK.md",
+      "snapshot": "7f27d2382c0eef799b30da97c1a2d65eb3160a13",
+      "main": "a4513965e5ae24361342d8abcfde5b0c476f3074",
+      "change": "modified"
+    },
+    {
+      "path": "assets/readme/browser.svg",
+      "snapshot": "6f2868332daf3f95b829d24e876f64fb31ba978b",
+      "main": "98b1712176597943b6ef1610d4f226e7afbb0cd5",
+      "change": "modified"
+    },
+    {
+      "path": "assets/readme/masthead-navara-contact.webp",
+      "snapshot": null,
+      "main": "e3ea1d228a8b455d723ee72df05cec25746642df",
+      "change": "added"
+    },
+    {
+      "path": "assets/readme/masthead.webp",
+      "snapshot": "3d5927f933c54675811cee52b5c6640ad131e0fa",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "assets/readme/portfolio.webp",
+      "snapshot": null,
+      "main": "8bebbe5aa3c351fccb1910d2fa24654ca75185f0",
+      "change": "added"
+    },
+    {
+      "path": "assets/readme/render.py",
+      "snapshot": null,
+      "main": "7e2009c6960f2a197714dc6a3e19398cfc5324db",
+      "change": "added"
+    },
+    {
+      "path": "assets/readme/source/black-hole.webp",
+      "snapshot": null,
+      "main": "529d5738229a6cd5f5c3a7414a0ab680343f050a",
+      "change": "added"
+    },
+    {
+      "path": "assets/readme/source/capture.json",
+      "snapshot": null,
+      "main": "186d7b2a8cbdc1aa595c1a9b15a9184055a132ef",
+      "change": "added"
+    },
+    {
+      "path": "assets/readme/source/navara-contact-prompt.txt",
+      "snapshot": null,
+      "main": "336b072f802914881e3712721a8c2eb7c16dfb50",
+      "change": "added"
+    },
+    {
+      "path": "assets/readme/source/navara-contact.json",
+      "snapshot": null,
+      "main": "292684c1f724ef2cce09b1d944102d0dac14f9fc",
+      "change": "added"
+    },
+    {
+      "path": "assets/readme/source/navara-contact.webp",
+      "snapshot": null,
+      "main": "e3ea1d228a8b455d723ee72df05cec25746642df",
+      "change": "added"
+    },
+    {
+      "path": "assets/readme/still-environment.webp",
+      "snapshot": null,
+      "main": "94d650de345c0c84d62a349467f7c169a9466255",
+      "change": "added"
+    },
+    {
+      "path": "assets/readme/systems.svg",
+      "snapshot": "45199a77d1dc662e5da710c986dcbdd86f2b2489",
+      "main": "63ae1a8b7e9bd2ff77898e28786c83910c61322b",
+      "change": "modified"
+    },
+    {
+      "path": "assets/readme/tactify.webp",
+      "snapshot": null,
+      "main": "e8b5a05ffc149ca6e2810ce8e9e8ea2b65424dc9",
+      "change": "added"
+    },
+    {
+      "path": "assets/readme/tactile.svg",
+      "snapshot": "eafa36b87fb3ee79ed46ac9ce391c948649d2c04",
+      "main": "46a18dff83b0c62e0781ae687cfdac622c99854d",
+      "change": "modified"
+    },
+    {
+      "path": "assets/readme/terminal.svg",
+      "snapshot": "c71a07fb6b0eaf130dd1c80032117e00fdec44d5",
+      "main": "4733ef65a79f2b4db59862c971f90f1f8822408e",
+      "change": "modified"
+    },
+    {
+      "path": "bun.lock",
+      "snapshot": "163ce561241588b416888e48c7e1c28d8bc23c9f",
+      "main": "60a6c14f429855d7e17612bfdc15a0f2196873b0",
+      "change": "modified"
+    },
+    {
+      "path": "package.json",
+      "snapshot": "513cfc47825007b6801ea6c0b57f7c3c09fa2e01",
+      "main": "d3e0cf9e40c77c5afd0b92332f6a62c82f6a1c23",
+      "change": "modified"
+    },
+    {
+      "path": "packages/black-hole/README.md",
+      "snapshot": "d7288037a0d99d4c4389aa326845f27ddc9dc4df",
+      "main": "1e280e36a29bc3f79cf2d0237920dd2da5a65e9f",
+      "change": "modified"
+    },
+    {
+      "path": "packages/black-hole/package.json",
+      "snapshot": "462aa5e8e52d17a1e757eb82349950bb1779331e",
+      "main": "8cd0054b65068307c21f69680f998df25694acb1",
+      "change": "modified"
+    },
+    {
+      "path": "packages/black-hole/tests/webgpu-sources.test.mjs",
+      "snapshot": "93b2b421e893e27f1bc43934c2bd27bc601b2525",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "packages/black-hole/tests/webgpu-sources.test.ts",
+      "snapshot": null,
+      "main": "11a4dfceba210f7bb355dd6ca0bdfa25856bc8a6",
+      "change": "added"
+    },
+    {
+      "path": "packages/black-hole/tooling/webgpu/port-shaders.mjs",
+      "snapshot": "d59f98a5b021d90538b07980c931a4e5778e69ab",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "packages/black-hole/tooling/webgpu/port-shaders.ts",
+      "snapshot": null,
+      "main": "194ca581b5db1838b670a848a4b54589a5498696",
+      "change": "added"
+    },
+    {
+      "path": "packages/eslint-config/base.js",
+      "snapshot": "09d316efdb6f6db4f6141815e87980a598f6ff54",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "packages/eslint-config/base.ts",
+      "snapshot": null,
+      "main": "7030193cce73a3e16b495e9ed6c5d0a82f68c900",
+      "change": "added"
+    },
+    {
+      "path": "packages/eslint-config/next.js",
+      "snapshot": "4df088ac8ddeca380f3568f74778906a90314d0b",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "packages/eslint-config/next.ts",
+      "snapshot": null,
+      "main": "18e38354e7117668ba6504080dc227a68ef89788",
+      "change": "added"
+    },
+    {
+      "path": "packages/eslint-config/package.json",
+      "snapshot": "6cc37f90d51f81a308c67b2d06d398194608e443",
+      "main": "090be2af5aae1b8d5c742afba7efe61efbb77c9b",
+      "change": "modified"
+    },
+    {
+      "path": "packages/eslint-config/plugins.d.ts",
+      "snapshot": null,
+      "main": "e835bb3cc17ee370fd341bb4324617d1133c60e0",
+      "change": "added"
+    },
+    {
+      "path": "packages/eslint-config/react-internal.js",
+      "snapshot": "daeccba24d4f4b95ad293d175b570acd126628a9",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "packages/eslint-config/react-internal.ts",
+      "snapshot": null,
+      "main": "0e5dbc604d4ec39774aa450cb604ad1151a25c58",
+      "change": "added"
+    },
+    {
+      "path": "packages/ui/eslint.config.mjs",
+      "snapshot": "19170f88edaf8893fdc80d2c616c081f2d838861",
+      "main": null,
+      "change": "deleted"
+    },
+    {
+      "path": "packages/ui/eslint.config.ts",
+      "snapshot": null,
+      "main": "e80e2b6d5bc9d588f6f3cfd6ec619e3ebfffb455",
+      "change": "added"
+    },
+    {
+      "path": "packages/ui/package.json",
+      "snapshot": "715430ca2ea3c7a1a67deb3d6a93a4fc3c67b215",
+      "main": "f9250104e80a3e819d6bbed55a264cc119905768",
+      "change": "modified"
+    },
+    {
+      "path": "tooling/prepare-browser.ts",
+      "snapshot": null,
+      "main": "404bf9140944617fed824f69628c766e4de1ce46",
+      "change": "added"
+    },
+    {
+      "path": "tooling/tests/prepare-browser.test.ts",
+      "snapshot": null,
+      "main": "e41c248eefa1b8e6ab0c1b8a8c341aead83c0128",
+      "change": "added"
+    },
+    {
+      "path": "tsconfig.tooling.json",
+      "snapshot": null,
+      "main": "bae1e475fc15b9035dfaf1f8e9965d0e535d1e6f",
+      "change": "added"
+    }
+  ]
+}

@@ -1,0 +1,120 @@
+name: Verify Blackhole
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_call:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  web:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with: { node-version: '24' }
+      - uses: oven-sh/setup-bun@v2
+        with: { bun-version: '1.3.5' }
+      - run: bun install --frozen-lockfile
+      - run: node --test release/tests/*.test.mjs
+      - run: bun run --cwd packages/blackhole build
+      - run: bun run --cwd packages/blackhole test
+      - run: bun run --cwd packages/cli build
+      - run: bun run --cwd packages/cli test
+      - run: bun run --cwd apps/explorer build
+      - run: node --test apps/explorer/tests/*.test.mjs
+      - uses: actions/upload-artifact@v4
+        with: { name: explorer-site, path: apps/explorer/dist/, if-no-files-found: error }
+      - run: node release/check.mjs
+      - name: Pack web and CLI with licenses
+        run: |
+          mkdir -p artifacts
+          npm pack ./packages/blackhole --ignore-scripts --pack-destination artifacts
+          npm pack ./packages/cli --ignore-scripts --pack-destination artifacts
+          git archive --format=tar.gz --prefix=blackhole/ HEAD > artifacts/blackhole-source.tar.gz
+      - uses: actions/upload-artifact@v4
+        with: { name: web-packages, path: 'artifacts/', if-no-files-found: error }
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { runner: macos-14, target: aarch64-apple-darwin, npm: darwin-arm64 }
+          - { runner: macos-15-intel, target: x86_64-apple-darwin, npm: darwin-x64 }
+          - { runner: ubuntu-24.04, target: x86_64-unknown-linux-gnu, npm: linux-x64 }
+          - { runner: ubuntu-24.04-arm, target: aarch64-unknown-linux-gnu, npm: linux-arm64 }
+          - { runner: windows-2022, target: x86_64-pc-windows-msvc, npm: win32-x64 }
+    runs-on: ${{ matrix.runner }}
+    env:
+      MACOSX_DEPLOYMENT_TARGET: '13.0'
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with: { node-version: '24' }
+      - name: Install Rust and Linux build prerequisites
+        shell: bash
+        run: |
+          rustup toolchain install 1.96.1 --profile minimal --component rustfmt
+          rustup default 1.96.1
+          rustup target add '${{ matrix.target }}'
+          if [[ "$RUNNER_OS" == Linux ]]; then sudo apt-get update && sudo apt-get install -y libwayland-dev pkg-config; fi
+      - run: python3 tooling/rust/sync-assets.py --check
+      - run: cargo fmt --all -- --check
+      - run: cargo test --workspace --locked --target ${{ matrix.target }}
+      - name: Build and package native executable
+        shell: bash
+        run: |
+          if [[ "$RUNNER_OS" == Windows ]]; then export RUSTFLAGS='-C target-feature=+crt-static'; fi
+          binary_dir='target/${{ matrix.target }}/release'
+          if [[ "$RUNNER_OS" == Linux ]]; then
+            # Keep host-test artifacts out of the Debian 12 link step.
+            docker run --rm -v "$PWD:/work" -w /work \
+              -e CARGO_TARGET_DIR=/work/target/debian12 \
+              rust:1.96.1-bookworm@sha256:a339861ae23e9abb272cea45dfafde21760d2ce6577a70f8a926153677902663 \
+              bash -c 'set -euo pipefail; apt-get update; apt-get install -y libwayland-dev pkg-config; cargo build --release --locked -p austindelic-blackhole-cli --target "${{ matrix.target }}"'
+            binary_dir='target/debian12/${{ matrix.target }}/release'
+          else
+            cargo build --release --locked -p austindelic-blackhole-cli --target '${{ matrix.target }}'
+          fi
+          python3 release/notices.py
+          suffix=''; if [[ "$RUNNER_OS" == Windows ]]; then suffix='.exe'; fi
+          if [[ "$RUNNER_OS" == Windows ]]; then
+            NPM_CLI_JS="$(node -p "require('node:path').join(require('node:path').dirname(process.execPath), 'node_modules/npm/bin/npm-cli.js')")"
+          else
+            NPM_CLI_JS="$(npm root -g)/npm/bin/npm-cli.js"
+          fi
+          export NPM_CLI_JS
+          node release/pack-platform.mjs '${{ matrix.npm }}' "$binary_dir/blackhole$suffix"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: native-${{ matrix.npm }}
+          path: |
+            artifacts/*.tgz
+            artifacts/${{ matrix.npm }}.json
+          if-no-files-found: error
+  packed:
+    needs: [web, native]
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [macos-14, macos-15-intel, ubuntu-24.04, ubuntu-24.04-arm, windows-2022]
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with: { node-version: '24' }
+      - uses: actions/download-artifact@v4
+        with: { pattern: 'native-*', path: artifacts, merge-multiple: true }
+      - uses: actions/download-artifact@v4
+        with: { name: web-packages, path: artifacts }
+      - name: Test installed tarballs on host platform
+        shell: bash
+        run: |
+          if [[ "$RUNNER_OS" == Windows ]]; then
+            NPM_CLI_JS="$(node -p "require('node:path').join(require('node:path').dirname(process.execPath), 'node_modules/npm/bin/npm-cli.js')")"
+          else
+            NPM_CLI_JS="$(npm root -g)/npm/bin/npm-cli.js"
+          fi
+          export NPM_CLI_JS
+          node release/test-packed.mjs artifacts

@@ -1,0 +1,23 @@
+Blackhole explorer asset provenance
+
+fonts/DepartureMono-Regular.woff2
+Departure Mono by Helena Zhang. SIL Open Font License 1.1.
+Original project: https://departuremono.com/
+Full license: /fonts/DepartureMono-OFL-1.1.txt
+Copied unchanged from the portfolio source snapshot supplied for this extraction.
+
+images/black-hole-mobile.webp
+Existing black-hole renderer reference artwork copied unchanged from
+apps/portfolio/public/images/black-hole-mobile.webp in Austin Delic's
+portfolio source snapshot. No personal profile content has been copied.
+Upstream portfolio: https://github.com/austindelic/austindelic
+Renderer licensing and upstream shader attributions: see the repository's
+LICENSE and NOTICE.md files.
+
+favicon.svg
+Original geometric black-hole mark created for the Blackhole explorer.
+Site code and adaptation: GPL-3.0-only, see repository license.
+
+previews/*.webp
+Actual local production-preview browser captures of this site and its shared
+renderer, captured during verification. Optimized to WebP; no generated art.

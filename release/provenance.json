@@ -1,0 +1,12 @@
+{
+  "redistributionReady": true,
+  "blockers": [],
+  "license": "GPL-3.0-only",
+  "reviewed": "2026-09-25",
+  "sources": {
+    "NPGS": "91305ca1661f18b60d6d33ed4616e4cd5b977b9f",
+    "DepartureMono": "75152a3f1e6dacdd248a6c397c97dbf27e33eea0",
+    "DSEG": "a32644015f2c81b98bc6a80e897770780003b15e"
+  },
+  "verification": "Canonical GLSL, generated WGSL, embedded web sources, installer templates, Cargo assets, Ghostty and production site audited; removed rain implementation absent and GPL/OFL/BSD notices preserved. Shader drift and asset synchronization pass."
+}

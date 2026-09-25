@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+const { title = 'Blackhole — Light, bent.', description = 'An open-source black hole renderer for the web and terminal. Explore gravitational lensing, amber light, and ASCII.', immersive = false } = Astro.props;
+const source = 'https://github.com/austindelic/blackhole';
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080807" /><meta name="description" content={description} />
+  <meta property="og:title" content={title} /><meta property="og:description" content={description} />
+  <meta property="og:type" content="website" /><meta property="og:url" content={new URL(Astro.url.pathname, 'https://blackhole.austindelic.com')} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:image" content="https://blackhole.austindelic.com/images/black-hole-mobile.webp" />
+  <link rel="canonical" href={new URL(Astro.url.pathname, 'https://blackhole.austindelic.com')} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <title>{title}</title>
+</head>
+<body class:list={[{ immersive }]}>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="header">
+    <a class="wordmark" href="/" aria-label="Blackhole home"><span class="mark" aria-hidden="true">◉</span> BLACKHOLE</a>
+    <nav aria-label="Main navigation"><a href="/explore/" aria-current={Astro.url.pathname.startsWith('/explore') ? 'page' : undefined}>Explorer</a><a href="/docs/" aria-current={Astro.url.pathname.startsWith('/docs') ? 'page' : undefined}>Docs</a><a href={source}>Source <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main"><slot /></main>
+  {!immersive && <footer class="footer"><span>BLACKHOLE <span class="muted">/ An experiment in light.</span></span><div><a href="/docs/architecture/">Architecture & credits</a><a href={source}>Open source ↗</a></div></footer>}
+</body>
+</html>

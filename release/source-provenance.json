@@ -1,0 +1,20 @@
+{
+  "snapshot": "001300843ebcb717ad410da0bd92f75c0e0449ad",
+  "snapshotParent": "cdfefe4566f9ea965f125c078be9175a9512b08d",
+  "sourceMain": "590531f771958e2775da1f8e0b4f79efe93fdb2f",
+  "originalBranch": "notcodex/windows-asset-validation",
+  "originalHead": "cdfefe4566f9ea965f125c078be9175a9512b08d",
+  "sourceRemote": "https://github.com/austindelic/austindelic.git",
+  "history": [
+    "25fe6a294547d2b9a137222efbb30be6f5d7ecc0 Port full renderer to WebGPU and make it the default",
+    "a2f1c4244edb94815cf126988274859480d42bac Increase star density and brightness",
+    "5a21949462705b01b1e346586c1efc6a03203bc1 Merge origin/main while retaining Gargantua ASCII rendering and presets",
+    "1fe06b9b2cba820e240a8d77bb98ab5016c81d38 Preserve Gargantua contours through ASCII and simplify rendering presets",
+    "9346a5f1177b91a0b4d4023235f56080522c5c1a Optimize portfolio rendering and optional code loading",
+    "0d6c78a9439c3faf70217d9c44657d23bd2f4fec new phone render and brighter",
+    "a4795a59fc780ccd63d420eca0396796811762bf lgtm",
+    "84522e73c492c1312766b27441f0da4226875796 Add controllable ASCII black hole shader",
+    "0b856bd1aeffb11d426aedb580296c389c80b3cd black hole"
+  ],
+  "upstreamLicenseAudit": "NPGS current upstream license inspected at 91305ca; exact historical upstream revision of originally copied shader not recorded in portfolio. Attribution and full GPLv3 terms retained; no claim of byte identity to current upstream."
+}

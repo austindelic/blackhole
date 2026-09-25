@@ -1,0 +1,10 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFile, readdir } from 'node:fs/promises';
+import { createElement } from 'react';
+import { renderToString } from 'react-dom/server';
+import { BlackHole } from '../dist/react.js';
+import { mountBlackHole, getBlackHoleRouteAnimation, normalizeBlackHoleAnimationRoute } from '../dist/index.js';
+test('public imports and React render are SSR-safe',()=>{assert.equal(typeof mountBlackHole,'function');assert.match(renderToString(createElement(BlackHole,{exposure:2,paused:true})),/<div/);assert.throws(()=>mountBlackHole(null),/DOM element/);});
+test('route lookup supports injected exact and wildcard presets',()=>{const base=getBlackHoleRouteAnimation('/');const routes={'/':base,'/work/*':base,'fallback':base};assert.equal(normalizeBlackHoleAnimationRoute('/work/demo?x=1',routes),'/work/*');assert.equal(normalizeBlackHoleAnimationRoute('/unknown',routes),'fallback');assert.equal(getBlackHoleRouteAnimation('/work/a',routes),base);});
+test('root JS has no React import or raw-loader dependency',async()=>{const files=await readdir(new URL('../dist',import.meta.url));for(const file of files.filter(f=>f.endsWith('.js') && f!=='react.js')){const code=await readFile(new URL('../dist/'+file,import.meta.url),'utf8');assert.doesNotMatch(code,/from ["']react["']/);assert.doesNotMatch(code,/\?raw["']/);}});

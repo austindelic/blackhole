@@ -1,0 +1,14 @@
+import {mountBlackHole} from '@austindelic/blackhole';
+import {BlackHole} from '@austindelic/blackhole/react';
+import {mountBlackHole as copiedMount} from './copied/src/index';
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+const options={backend:'webgl2' as const,quality:'performance' as const,resolutionScale:0.4,interactive:false,asciiEnabled:false,debugStats:true};
+const w=window as any;
+w.mount=mountBlackHole;
+w.view=mountBlackHole(document.querySelector('#vanilla')!,options);
+w.copied=copiedMount(document.querySelector('#copied')!,options);
+w.ready=Promise.all([w.view.ready,w.copied.ready]);
+w.reactRoot=createRoot(document.querySelector('#react')!);
+w.renderReact=(options={})=>w.reactRoot.render(<React.StrictMode><BlackHole style={{width:320,height:220}} {...{backend:'webgl2',quality:'performance',resolutionScale:0.4,interactive:false,asciiEnabled:false,debugStats:true,...options}} /></React.StrictMode>);
+w.renderReact();

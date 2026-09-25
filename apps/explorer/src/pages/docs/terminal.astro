@@ -1,0 +1,16 @@
+---
+import Docs from '../../layouts/Docs.astro';
+---
+<Docs title="Gravity in the terminal." intro="Three ways in: a terminal application, a Ratatui integration, and a subtle Ghostty background.">
+<h2>The command line</h2><pre><code>npx @austindelic/blackhole-cli explore</code></pre><p>The CLI launches the native terminal renderer for your platform. See the repository's <a href="https://github.com/austindelic/blackhole#terminal">terminal guide</a> for available builds and source installation.</p>
+<h2>Rust and Ratatui</h2><pre><code>cargo install austindelic-blackhole-cli
+blackhole</code></pre><p>The terminal renderer uses Rust and Ratatui to present its character grid. Build it from the repository when a prebuilt binary is unavailable, or study the native application as an integration reference.</p><pre><code>git clone https://github.com/austindelic/blackhole.git
+cd blackhole
+cargo run --release -p austindelic-blackhole-cli</code></pre><p>For embedding in your own Rust application, use <code>austindelic-blackhole</code> and <code>austindelic-blackhole-ratatui</code>. Follow the crates’ public API and example in the <a href="https://github.com/austindelic/blackhole/tree/main/crates">Rust source</a>. The terminal and web runtimes have different rendering constraints; they share a visual direction rather than promising identical output.</p>
+<h2>Ghostty: a quieter orbit</h2><p>Export the shader to a directory you control. This command does not edit your Ghostty settings.</p><pre><code>npx @austindelic/blackhole-cli ghostty --out-dir ./blackhole-ghostty</code></pre><p>Create a separate test configuration using the absolute path to the exported shader:</p><pre><code>background = #080807
+foreground = #e8e2d8
+custom-shader = /absolute/path/blackhole-ghostty/blackhole.glsl
+custom-shader-animation = true</code></pre><p>On macOS, open an isolated Ghostty process without loading your default configuration:</p><pre><code>open -na Ghostty --args --config-default-files=false \
+  --config-file=/absolute/path/to/test-config</code></pre><p>On Linux, run <code>ghostty</code> with the same two configuration arguments.</p>
+<h2>Readable by default</h2><p>The default preset adds dim amber animation to dark backgrounds while keeping terminal glyph positions unchanged. It works best with an opaque dark background. Set <code>BLACKHOLE_INTENSITY</code> in the shader to control its strength; the default is <code>0.22</code>.</p><p>For an optional lensing effect, copy the shader and set <code>BLACKHOLE_LENSING</code> to <code>1</code>. This deliberately distorts the terminal text. The default remains the more readable background preset.</p><p>Animation runs while the terminal is focused. For a still effect, use <code>custom-shader-animation = false</code> and set <code>BLACKHOLE_SPEED</code> to <code>0.0</code>. Remove the <code>custom-shader</code> line to disable it.</p><div class="notice">The Ghostty shader is a single-pass artistic adaptation. It does not claim the web renderer's physics or multipass rendering parity.</div><p>See <a href="https://ghostty.org/docs/config/reference#custom-shader">Ghostty's shader documentation</a> and the <a href="https://github.com/austindelic/blackhole/tree/main/integrations/ghostty">integration source</a>.</p>
+</Docs>

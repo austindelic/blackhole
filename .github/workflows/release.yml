@@ -1,0 +1,93 @@
+name: Release Blackhole
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing vX.Y.Z tag to verify or publish
+        required: true
+        type: string
+      verified_run_id:
+        description: Successful Verify Blackhole run ID for this exact tag commit
+        required: true
+        type: string
+      publish:
+        description: Publish verified artifacts (requires release environment)
+        default: false
+        type: boolean
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: blackhole-release
+  cancel-in-progress: false
+jobs:
+  guard:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+        with: { fetch-depth: 0 }
+      - name: Require dispatch from the release tag itself
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          [[ "$RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
+          test "$GITHUB_REF" = "refs/tags/$RELEASE_TAG"
+          test "$(git rev-parse "$RELEASE_TAG^{commit}")" = "$GITHUB_SHA"
+      - uses: actions/setup-node@v6
+        with: { node-version: '24' }
+      - run: node release/verify-run.mjs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERIFIED_RUN_ID: ${{ inputs.verified_run_id }}
+      - run: node release/check.mjs --publish
+        env:
+          RELEASE_TAG: ${{ inputs.tag }}
+  publish:
+    if: inputs.publish
+    needs: guard
+    runs-on: ubuntu-24.04
+    environment: release
+    permissions:
+      contents: write
+      actions: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with: { node-version: '24', registry-url: 'https://registry.npmjs.org' }
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: 'native-*'
+          path: artifacts
+          merge-multiple: true
+          run-id: ${{ inputs.verified_run_id }}
+          github-token: ${{ github.token }}
+      - uses: actions/download-artifact@v4
+        with:
+          name: web-packages
+          path: artifacts
+          run-id: ${{ inputs.verified_run_id }}
+          github-token: ${{ github.token }}
+      - name: Publish exact tested npm archives (platforms before launcher)
+        run: node release/publish-npm.mjs artifacts
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish Cargo packages in dependency order
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        run: |
+          rustup toolchain install 1.96.1 --profile minimal
+          rustup default 1.96.1
+          sudo apt-get update && sudo apt-get install -y libwayland-dev pkg-config
+          cargo publish --locked -p austindelic-blackhole
+          cargo publish --locked -p austindelic-blackhole-ratatui
+          cargo publish --locked -p austindelic-blackhole-cli
+          cp target/package/*.crate artifacts/
+      - name: Attach archives and corresponding source to GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          cd artifacts
+          sha256sum *.tgz *.crate blackhole-source.tar.gz > SHA256SUMS
+          gh release create "$RELEASE_TAG" --verify-tag --title "Blackhole $RELEASE_TAG" --generate-notes ./*.tgz ./*.crate ./blackhole-source.tar.gz ./SHA256SUMS

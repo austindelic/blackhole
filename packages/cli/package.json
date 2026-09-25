@@ -1,0 +1,41 @@
+{
+  "name": "@austindelic/blackhole-cli",
+  "version": "0.1.0",
+  "description": "Editable Blackhole source installer and native explorer launcher",
+  "type": "module",
+  "license": "GPL-3.0-only",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "blackhole": "./bin/blackhole.mjs"
+  },
+  "files": [
+    "bin",
+    "templates",
+    "integrations",
+    "README.md",
+    "LICENSE",
+    "NOTICE.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "prepack": "npm run build"
+  },
+  "optionalDependencies": {
+    "@austindelic/blackhole-darwin-arm64": "0.1.0",
+    "@austindelic/blackhole-darwin-x64": "0.1.0",
+    "@austindelic/blackhole-linux-arm64": "0.1.0",
+    "@austindelic/blackhole-linux-x64": "0.1.0",
+    "@austindelic/blackhole-win32-x64": "0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austindelic/blackhole.git"
+  },
+  "homepage": "https://github.com/austindelic/blackhole#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}

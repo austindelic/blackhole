@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.astro/
+target/
+.DS_Store
+.env
+.env.*
+!\.env.example
+work/
+artifacts/
+.playwright-cli/
+.wrangler/
+__pycache__/
+packages/cli/integrations/

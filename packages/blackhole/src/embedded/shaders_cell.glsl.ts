@@ -1,0 +1,2 @@
+// Generated from shaders/cell.glsl; edit the canonical shader and run build.
+export default "// Original ASCII-cell trace, sharing the full physical raymarch and camera math.\nvoid mainImage(out vec4 fragColor, in vec2 fragCoord) {\n    vec2 uv = fragCoord / iResolution.xy;\n    mat4 inverseCamRot;\n    vec3 mapCamDir;\n    TraceResult result = TraceFromCamera(uv, max(uCanvasResolution, vec2(1.0)), 0.5, inverseCamRot, mapCamDir);\n    fragColor = FinalizeTrace(result, uv, inverseCamRot, mapCamDir);\n}\n";

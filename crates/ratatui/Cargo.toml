@@ -1,0 +1,15 @@
+[package]
+name = "austindelic-blackhole-ratatui"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-only"
+description = "Nonblocking Ratatui widget for completed Blackhole frames"
+readme = "README.md"
+repository = "https://github.com/austindelic/blackhole"
+homepage = "https://blackhole.austindelic.com"
+authors = ["Austin Delic"]
+keywords = ["blackhole", "wgpu", "ascii", "terminal"]
+
+[dependencies]
+austindelic-blackhole = { version = "0.1.0", path = "../renderer" }
+ratatui = { version = "0.30", default-features = false }

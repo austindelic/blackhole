@@ -1,0 +1,40 @@
+---
+import Docs from '../../layouts/Docs.astro';
+---
+<Docs title="Give light a canvas." intro="Start with the React component. Keep the renderer, make the experience your own.">
+<h2>Install for the web</h2><pre><code>npm install @austindelic/blackhole react react-dom</code></pre>
+<p>Render into a container with an explicit height. The component owns its canvas and releases GPU resources when it unmounts.</p>
+<pre><code>{`import { BlackHole } from '@austindelic/blackhole/react';
+
+export function Scene() {
+  return (
+    <div style={{ height: '100vh', background: '#080807' }}>
+      <BlackHole
+        showControls={false}
+        quality="ascii-balanced"
+        asciiEnabled={true}
+        exposure={2}
+        bloomStrength={0.65}
+      />
+    </div>
+  );
+}`}</code></pre>
+<h2>Choose the experience</h2><div class="table-wrap"><table><thead><tr><th>Option</th><th>Use it for</th></tr></thead><tbody><tr><td><code>quality</code></td><td><code>mobile-safe</code>, <code>ascii-balanced</code>, or <code>cinematic-ascii</code>. Start balanced; use mobile-safe on constrained hardware.</td></tr><tr><td><code>asciiEnabled</code></td><td>Switch between glyphs and raw rendered light.</td></tr><tr><td><code>exposure</code> / <code>bloomStrength</code></td><td>Adjust brightness and the glow around the accretion disk.</td></tr><tr><td><code>interactive</code></td><td>Enable pointer and keyboard camera navigation.</td></tr><tr><td><code>backend</code></td><td><code>auto</code>, <code>webgl2</code>, or <code>webgpu</code>. Support depends on the browser and device.</td></tr></tbody></table></div>
+<p>The <a href="/explore/">explorer</a> exports a JSON configuration with renderer props and a selected camera preset. Its share link stores the same settings in the URL; it does not upload them to a server.</p>
+<h2>Astro and server rendering</h2><p>Mount the interactive component on the client with Astro's React integration. The page and documentation can remain static HTML.</p><pre><code>{`---
+import { BlackHole } from '@austindelic/blackhole/react';
+---
+<div style="height: 100vh">
+  <BlackHole client:only="react" showControls={false} />
+</div>`}</code></pre>
+<h2>Install editable source</h2><pre><code>npx @austindelic/blackhole-cli add --framework react \
+  --out-dir src/blackhole</code></pre><p>The CLI writes editable renderer source into your project. Use <code>--dry-run</code> to inspect the file list first. Existing files are protected unless you explicitly request <code>--overwrite</code>.</p>
+<h2>Build from source</h2><pre><code>git clone https://github.com/austindelic/blackhole.git
+cd blackhole
+bun install
+bun run --cwd packages/blackhole build
+bun run --cwd apps/explorer dev</code></pre>
+<p>Source installs use the workspace package. You can inspect the shader pipeline, run the explorer locally, and propose changes without publishing anything.</p>
+<h2>Design for the device</h2><p>GPU support and thermal limits vary. Keep a static image available, use a conservative quality preset on small screens, and honor <code>prefers-reduced-motion</code>. The explorer starts paused when reduced motion is requested and keeps its controls available if rendering fails.</p>
+<p>See the <a href="https://github.com/austindelic/blackhole/blob/main/WEB_API.md">package API contract</a> for the complete supported surface.</p>
+</Docs>

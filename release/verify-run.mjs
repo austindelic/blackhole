@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+const { VERIFIED_RUN_ID: id, GITHUB_REPOSITORY: repository, GITHUB_SHA: sha, GH_TOKEN: token } = process.env;
+assert.match(id ?? '', /^\d+$/);
+assert(repository && sha && token);
+const response = await fetch(`https://api.github.com/repos/${repository}/actions/runs/${id}`, { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json' } });
+assert(response.ok, `Cannot verify run: HTTP ${response.status}`);
+const run = await response.json();
+assert.equal(run.repository.full_name, repository);
+assert.equal(run.head_sha, sha, 'Artifacts must originate from this exact commit');
+assert.equal(run.path, '.github/workflows/ci.yml', 'Expected Verify Blackhole workflow');
+assert(['push', 'workflow_dispatch'].includes(run.event), 'PR artifacts are not release inputs');
+assert.equal(run.status, 'completed');
+assert.equal(run.conclusion, 'success', 'Every required matrix job must pass');
+console.log(`Verified successful CI run ${id} at ${sha}`);

@@ -1,0 +1,33 @@
+async page => {
+ const assert=(x,m)=>{if(!x)throw Error(m)};
+ await page.goto('http://127.0.0.1:5198/?fresh=final');
+ await page.waitForFunction(()=>window.view?.getStats?.());
+ assert((await page.evaluate(()=>Promise.all([window.view.ready,window.copied.ready]))).every(Boolean),'ready');
+ await page.evaluate(()=>{window.view.pause();window.copied.pause();});
+ await page.waitForTimeout(400);
+ const frozen=await page.evaluate(()=>window.view.snapshot().shaderTime);
+ await page.waitForTimeout(400);
+ assert((await page.evaluate(()=>window.view.snapshot().shaderTime))===frozen,'pause clock');
+ await page.evaluate(()=>window.view.update({exposure:2.2,bloomStrength:0.3}));
+ await page.waitForFunction(()=>window.view.getStats()?.exposure===2.2);
+ assert((await page.evaluate(()=>window.view.snapshot().shaderTime))===frozen,'paused update clock '+frozen+' -> '+(await page.evaluate(()=>window.view.snapshot().shaderTime)));
+ await page.evaluate(()=>window.view.setCamera({position:[0,2,9],forward:[0,0,-1]}));
+ await page.waitForFunction(()=>window.view.getStats()?.cameraPosition[2]===9);
+ await page.evaluate(()=>{document.querySelector('#vanilla').style.width='220px';window.view.resize()});
+ await page.waitForFunction(()=>window.view.getStats()?.renderWidth<100);
+ await page.evaluate(()=>window.view.resume());
+ await page.waitForFunction(t=>window.view.snapshot().shaderTime>t,frozen);
+ await page.evaluate(()=>{window.renderReact({paused:true,exposure:2,asciiEnabled:true})});
+ await page.waitForTimeout(500);
+ assert(await page.locator('#react canvas').count()===1,'StrictMode one canvas');
+ await page.emulateMedia({reducedMotion:'reduce'});
+ const ready=await page.evaluate(async()=>{window.initialPaused=window.mount(document.querySelector('#fallback'),{backend:'webgl2',quality:'performance',paused:true,debugStats:true,interactive:false,asciiEnabled:false});return await window.initialPaused.ready});
+ assert(ready,'initial paused ready');
+ assert(await page.evaluate(()=>window.initialPaused.snapshot().shaderTime)===0,'initial paused time');
+ await page.evaluate(()=>window.initialPaused.resume());
+ await page.waitForFunction(()=>window.initialPaused.snapshot().shaderTime>0.02);
+ await page.evaluate(()=>{window.initialPaused.dispose();window.view.dispose();window.view.dispose();window.copied.dispose();window.reactRoot.unmount()});
+ assert(await page.locator('canvas').count()===0,'dispose all canvases');
+ assert(await page.locator('[role=alert]').count()===0,'no renderer errors');
+ console.log('PASS: ready, pause, paused controls/camera/resize, resume, React StrictMode, initial paused, reduced-motion override, disposal');
+}

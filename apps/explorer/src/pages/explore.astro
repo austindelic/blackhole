@@ -1,0 +1,8 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Explorer from '../components/Explorer';
+---
+<Layout title="Explorer — Blackhole" immersive>
+  <Explorer client:only="react"><div slot="fallback" class="explorer-loading" role="status">Preparing the observatory…</div></Explorer>
+  <noscript><p class="notice">The live explorer needs JavaScript. <a href="/docs/">Read the documentation</a> or view the <a href="/images/black-hole-mobile.webp">static render</a>.</p></noscript>
+</Layout>
