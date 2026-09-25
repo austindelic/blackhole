@@ -11,6 +11,7 @@ const targets = ['darwin-arm64','darwin-x64','linux-arm64','linux-x64','win32-x6
 function fixture() {
   const dir = mkdtempSync(path.join(tmpdir(),'blackhole-release-test-'));
   cpSync(path.join(root,'release'),path.join(dir,'release'),{recursive:true});
+  writeFileSync(path.join(dir,'release/provenance.json'),JSON.stringify({redistributionReady:false,blockers:['fixture unresolved rights']}));
   for (const f of ['LICENSE','NOTICE.md']) cpSync(path.join(root,f),path.join(dir,f));
   for (const [folder,name] of [['blackhole','blackhole'],['cli','blackhole-cli']]) {
     mkdirSync(path.join(dir,`packages/${folder}`),{recursive:true});

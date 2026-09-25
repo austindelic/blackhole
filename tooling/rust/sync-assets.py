@@ -19,7 +19,7 @@ manifest = {}
 stale = []
 for source, target in mappings:
     data = source.read_bytes()
-    manifest[str(source.relative_to(SOURCE))] = hashlib.sha256(data).hexdigest()
+    manifest[source.relative_to(SOURCE).as_posix()] = hashlib.sha256(data).hexdigest()
     if args.check:
         if not target.exists() or target.read_bytes() != data:
             stale.append(str(target.relative_to(ROOT)))
