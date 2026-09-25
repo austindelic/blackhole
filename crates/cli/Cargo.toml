@@ -1,6 +1,6 @@
 [package]
 name = "austindelic-blackhole-cli"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 license = "GPL-3.0-only"
 description = "Explore a GPU rendered black hole in your terminal"
@@ -15,8 +15,8 @@ name = "blackhole"
 path = "src/main.rs"
 
 [dependencies]
-austindelic-blackhole = { version = "0.1.0", path = "../renderer" }
-austindelic-blackhole-ratatui = { version = "0.1.0", path = "../ratatui" }
+austindelic-blackhole = { version = "0.1.1", path = "../renderer" }
+austindelic-blackhole-ratatui = { version = "0.1.1", path = "../ratatui" }
 ratatui = { version = "0.30", default-features = false, features = ["crossterm_0_29"] }
 crossterm = "0.29"
 anyhow = "1"

@@ -1,6 +1,6 @@
 # @austindelic/blackhole
 
-A framework-neutral WebGL2/WebGPU black hole renderer, with ASCII, bloom, camera controls and optional React bindings. Version 0.1.0, GPL-3.0-only. Shader and font notices ship with the package.
+A framework-neutral WebGL2/WebGPU black hole renderer, with ASCII, bloom, camera controls and optional React bindings. Version 0.1.1, GPL-3.0-only. Shader and font notices ship with the package.
 
 ```ts
 import { mountBlackHole } from '@austindelic/blackhole';

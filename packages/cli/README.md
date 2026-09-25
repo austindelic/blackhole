@@ -1,6 +1,6 @@
 # @austindelic/blackhole-cli
 
-Node.js 22+. Version 0.1.0, GPL-3.0-only.
+Node.js 22+. Version 0.1.1, GPL-3.0-only.
 
 ```sh
 npx @austindelic/blackhole-cli add --framework react --out-dir src/blackhole

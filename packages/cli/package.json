@@ -1,6 +1,6 @@
 {
   "name": "@austindelic/blackhole-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Editable Blackhole source installer and native explorer launcher",
   "type": "module",
   "license": "GPL-3.0-only",
@@ -24,11 +24,11 @@
     "prepack": "npm run build"
   },
   "optionalDependencies": {
-    "@austindelic/blackhole-darwin-arm64": "0.1.0",
-    "@austindelic/blackhole-darwin-x64": "0.1.0",
-    "@austindelic/blackhole-linux-arm64": "0.1.0",
-    "@austindelic/blackhole-linux-x64": "0.1.0",
-    "@austindelic/blackhole-win32-x64": "0.1.0"
+    "@austindelic/blackhole-darwin-arm64": "0.1.1",
+    "@austindelic/blackhole-darwin-x64": "0.1.1",
+    "@austindelic/blackhole-linux-arm64": "0.1.1",
+    "@austindelic/blackhole-linux-x64": "0.1.1",
+    "@austindelic/blackhole-win32-x64": "0.1.1"
   },
   "repository": {
     "type": "git",

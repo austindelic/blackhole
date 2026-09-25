@@ -59,7 +59,7 @@ export function main(args=process.argv.slice(2)){
  if(options.command==='help' || options.command==='--help' || options.command==='-h'){
   console.log('blackhole add [--framework react|vanilla] [--out-dir src/blackhole] [--dry-run] [--overwrite]\nblackhole explore [native options]\nblackhole ghostty [--out-dir ghostty] [--dry-run] [--overwrite]');return;
  }
- if(options.command==='--version'){console.log('0.1.0');return;}
+ if(options.command==='--version'){console.log('0.1.1');return;}
  if(options.command==='explore') return require('./native.cjs').launch({argv:options.args});
  if(!['add','ghostty'].includes(options.command)) throw new Error(`Unknown command: ${options.command}`);
  let files;
@@ -69,7 +69,7 @@ export function main(args=process.argv.slice(2)){
   files=JSON.parse(readFileSync(path.join(root,'templates/source.json'),'utf8'));
   if(framework==='vanilla') delete files['src/react.tsx'];
   options.outDir ??= 'src/blackhole';
-  console.log(`Installing editable ${framework} source (0.1.0)`);
+  console.log(`Installing editable ${framework} source (0.1.1)`);
  }else{
   if(options.framework) throw new Error('--framework applies only to add');
   options.outDir ??='ghostty';

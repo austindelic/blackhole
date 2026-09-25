@@ -40,7 +40,7 @@ dependencies = [
 
 [[package]]
 name = "austindelic-blackhole"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "anyhow",
  "bytemuck",
@@ -53,7 +53,7 @@ dependencies = [
 
 [[package]]
 name = "austindelic-blackhole-cli"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "anyhow",
  "austindelic-blackhole",
@@ -65,7 +65,7 @@ dependencies = [
 
 [[package]]
 name = "austindelic-blackhole-ratatui"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "austindelic-blackhole",
  "ratatui",

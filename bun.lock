@@ -7,7 +7,7 @@
     },
     "apps/explorer": {
       "name": "@blackhole/explorer",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "dependencies": {
         "@astrojs/react": "^4.4.2",
         "@austindelic/blackhole": "workspace:*",
@@ -23,7 +23,7 @@
     },
     "packages/blackhole": {
       "name": "@austindelic/blackhole",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@types/react": "^19.2.7",
         "@types/react-dom": "^19.2.3",
@@ -43,16 +43,16 @@
     },
     "packages/cli": {
       "name": "@austindelic/blackhole-cli",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "bin": {
         "blackhole": "./bin/blackhole.mjs",
       },
       "optionalDependencies": {
-        "@austindelic/blackhole-darwin-arm64": "0.1.0",
-        "@austindelic/blackhole-darwin-x64": "0.1.0",
-        "@austindelic/blackhole-linux-arm64": "0.1.0",
-        "@austindelic/blackhole-linux-x64": "0.1.0",
-        "@austindelic/blackhole-win32-x64": "0.1.0",
+        "@austindelic/blackhole-darwin-arm64": "0.1.1",
+        "@austindelic/blackhole-darwin-x64": "0.1.1",
+        "@austindelic/blackhole-linux-arm64": "0.1.1",
+        "@austindelic/blackhole-linux-x64": "0.1.1",
+        "@austindelic/blackhole-win32-x64": "0.1.1",
       },
     },
   },
