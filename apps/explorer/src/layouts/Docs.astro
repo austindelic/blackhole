@@ -1,8 +1,8 @@
 ---
 import Layout from './Layout.astro';
-const { title, label = 'DOCUMENTATION', intro } = Astro.props;
-const links = [['/docs/', 'Web / React'], ['/docs/terminal/', 'Rust / Ratatui / Ghostty'], ['/docs/architecture/', 'Architecture / Credits']];
+const { title, intro } = Astro.props;
+const links = [['/docs/', 'Web integration'], ['/docs/terminal/', 'Terminal integrations'], ['/docs/architecture/', 'Architecture and credits']];
 ---
 <Layout title={`${title} — Blackhole`} description={intro}>
-  <div class="docs-shell section"><aside class="docs-nav"><p class="eyebrow">FIELD NOTES</p><nav aria-label="Documentation">{links.map(([url,name]) => <a href={url} aria-current={Astro.url.pathname.replace(/\/$/, '') === url.replace(/\/$/, '') ? 'page' : undefined}>{name}</a>)}</nav><a class="text-link" href="/explore/">Open explorer ↗</a></aside><article class="prose"><p class="eyebrow">{label}</p><h1>{title}</h1><p class="lede">{intro}</p><slot /></article></div>
+  <div class="docs-shell section"><aside class="docs-nav"><nav aria-label="Documentation">{links.map(([url,name]) => <a href={url} aria-current={Astro.url.pathname.replace(/\/$/, '') === url.replace(/\/$/, '') ? 'page' : undefined}>{name}</a>)}</nav><a class="text-link" href="/explore/">Open explorer ↗</a></aside><article class="prose"><h1>{title}</h1><p class="lede">{intro}</p><slot /></article></div>
 </Layout>

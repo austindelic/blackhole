@@ -1,18 +1,18 @@
 ---
 import Docs from '../../layouts/Docs.astro';
 ---
-<Docs title="Gravity in the terminal." intro="Three ways in: a terminal application, a Ratatui integration, and a subtle Ghostty background.">
+<Docs title="Terminal integrations" intro="Run the explorer, use the Rust crates, or export a Ghostty shader.">
 <h2>The command line</h2><pre><code>npx @austindelic/blackhole-cli explore</code></pre><p>The CLI launches the native terminal renderer for your platform. See the repository's <a href="https://github.com/austindelic/blackhole#terminal">terminal guide</a> for available builds and source installation.</p>
-<h2>Rust and Ratatui</h2><pre><code>cargo install austindelic-blackhole-cli
+<h2 id="rust">Rust and Ratatui</h2><pre><code>cargo install austindelic-blackhole-cli
 blackhole</code></pre><p>The terminal renderer uses Rust and Ratatui to present its character grid. Build it from the repository when a prebuilt binary is unavailable, or study the native application as an integration reference.</p><pre><code>git clone https://github.com/austindelic/blackhole.git
 cd blackhole
 cargo run --release -p austindelic-blackhole-cli</code></pre><p>For embedding in your own Rust application, use <code>austindelic-blackhole</code> and <code>austindelic-blackhole-ratatui</code>. Follow the crates’ public API and example in the <a href="https://github.com/austindelic/blackhole/tree/main/crates">Rust source</a>. The terminal and web runtimes have different rendering constraints; they share a visual direction rather than promising identical output.</p>
-<h2>Ghostty: the same scene</h2><p>The Ghostty integration uses the canonical web ray tracer, home camera, starfield, amber tone mapping, ASCII analysis, and Departure Mono glyph raster. Export the complete shader chain:</p><pre><code>npx @austindelic/blackhole-cli ghostty --out-dir ./blackhole-ghostty</code></pre><p>Use all three files in this order, with an opaque background:</p><pre><code>background-opacity = 1
-alpha-blending = native
-custom-shader = /absolute/path/blackhole-ghostty/blackhole-scene.glsl
-custom-shader = /absolute/path/blackhole-ghostty/blackhole-analysis.glsl
-custom-shader = /absolute/path/blackhole-ghostty/blackhole.glsl
-custom-shader-animation = true</code></pre><p>Requires Ghostty 1.3 or newer. The export command prints the paths and never changes your active settings. To try an isolated macOS window:</p><pre><code>open -na Ghostty --args --config-default-files=false \
-  --config-file=/absolute/path/to/preview.conf</code></pre><p>On Linux, run <code>ghostty</code> with the same configuration arguments. Remove all three shader lines to disable the effect. Do not insert another effect between the three passes.</p>
-<h2>Shared rendering, different surface</h2><p>The first pass traces the physical scene. The second analyzes its cells. The last draws the actual font glyphs and preserves terminal text, selection and cursor pixels. No synthetic ring replaces the disk, and terminal text is not warped.</p><p>The default follows the balanced web preset, including its camera tilt and exposure. Ghostty has no independent previous-frame texture here, so temporal smoothing and glyph hysteresis are unavailable. The cinematic bloom pipeline is not included, and 8-bit packing can change individual glyphs and colors. Pixel-identical output is not promised.</p><p>This full renderer costs more than a decorative shader. See the integration's measured frame costs before enabling continuous animation. For a still scene, set <code>BLACKHOLE_TIME_SCALE</code> to <code>0.0</code> in all three files. If automatic display-scale detection is wrong, set <code>BLACKHOLE_PIXEL_SCALE</code> to your actual 1× or 2× scale in every file.</p><p>See <a href="https://github.com/austindelic/blackhole/tree/main/integrations/ghostty">source, generation instructions and verification limits</a>, and <a href="https://ghostty.org/docs/config/reference#custom-shader">Ghostty's shader documentation</a>.</p>
+<h2 id="ghostty">Ghostty</h2>
+<p>The published CLI, version 0.1.0, exports a simple background shader. It does not reproduce the web renderer. The replacement in the repository is not yet released and still needs native visual verification.</p>
+<pre><code>npx @austindelic/blackhole-cli@0.1.0 ghostty --out-dir ./blackhole-ghostty</code></pre>
+<p>The command copies the shader and its notices, and prints the configuration. It does not change your active settings. For this published version, add:</p>
+<pre><code>custom-shader = /absolute/path/blackhole-ghostty/blackhole.glsl
+custom-shader-animation = true</code></pre>
+<p>Remove that <code>custom-shader</code> line to disable it. Set <code>custom-shader-animation = false</code> to render only when the terminal updates.</p>
+<p>See the <a href="https://github.com/austindelic/blackhole/tree/main/integrations/ghostty">replacement's source and verification notes</a> for its three-pass setup and limitations. Those instructions do not apply to the 0.1.0 export.</p>
 </Docs>

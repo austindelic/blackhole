@@ -153,7 +153,7 @@ export default function Explorer() {
           />
         )}
         <div className="viewport-top">
-          <span className="eyebrow">OBSERVATORY / 001</span>
+          <span className="viewport-label">Explorer</span>
           <button
             className="icon-button"
             onClick={fullscreen}
@@ -164,31 +164,22 @@ export default function Explorer() {
         </div>
         <div className="viewport-bottom">
           <div>
-            <h1>
-              At the edge
-              <br />
-              of everything.
-            </h1>
-            <p>
-              {settings.ascii
-                ? "LIGHT, TRANSLATED INTO CHARACTERS."
-                : "LIGHT, BEFORE THE GLYPHS."}
-            </p>
+            <h1>{cameras[settings.camera].label}</h1>
+            <p>{settings.ascii ? "ASCII" : "Rendered"}</p>
           </div>
           <span className="live-state">
-            <i className={settings.paused ? "" : "status-dot"} />
             {error
-              ? "STATIC FALLBACK"
+              ? "Static preview"
               : !ready
-                ? "INITIALIZING"
+                ? "Loading"
                 : settings.paused
-                  ? "PAUSED"
-                  : "LIVE RENDER"}
+                  ? "Paused"
+                  : "Playing"}
           </span>
         </div>
         {!ready && !error && (
           <p className="render-status" role="status">
-            Preparing the renderer…
+            Loading renderer…
           </p>
         )}
         {error && (
@@ -201,16 +192,9 @@ export default function Explorer() {
         )}
       </div>
       <aside className="control-panel" aria-label="Explorer controls">
-        <div className="panel-heading">
-          <span className="eyebrow">YOUR OBSERVATORY</span>
-          <span className="muted">[ 01 ]</span>
-        </div>
-        <h2>Find your orbit.</h2>
-        <p className="panel-description">
-          A few controls. A different universe.
-        </p>
+        <h2>Controls</h2>
         <label className="field">
-          Camera preset
+          Camera
           <select
             value={settings.camera}
             onChange={(e) =>
@@ -225,7 +209,7 @@ export default function Explorer() {
           </select>
         </label>
         <fieldset className="mode-field">
-          <legend>Render mode</legend>
+          <legend>Rendering</legend>
           <div className="segmented">
             <button
               aria-pressed={settings.ascii}
@@ -237,7 +221,7 @@ export default function Explorer() {
               aria-pressed={!settings.ascii}
               onClick={() => update({ ascii: false })}
             >
-              Raw light
+              Rendered
             </button>
           </div>
         </fieldset>
@@ -330,7 +314,7 @@ export default function Explorer() {
           </p>
         </details>
         <a className="panel-docs" href="/docs/">
-          Make it your own <span>Read the docs →</span>
+          Documentation →
         </a>
       </aside>
     </div>
