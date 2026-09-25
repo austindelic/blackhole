@@ -73,10 +73,11 @@ export function main(args=process.argv.slice(2)){
  }else{
   if(options.framework) throw new Error('--framework applies only to add');
   options.outDir ??='ghostty';
-  files={'blackhole.glsl':readFileSync(path.join(root,'integrations/ghostty/blackhole.glsl'),'utf8'),'LICENSE':readFileSync(path.join(root,'LICENSE'),'utf8'),'NOTICE.md':readFileSync(path.join(root,'NOTICE.md'),'utf8')};
+  files=Object.fromEntries(['blackhole-scene.glsl','blackhole-analysis.glsl','blackhole.glsl','DepartureMono-OFL-1.1.txt','README.md'].map(name=>[name,readFileSync(path.join(root,'integrations/ghostty',name),'utf8')]));
+  Object.assign(files,{'LICENSE':readFileSync(path.join(root,'LICENSE'),'utf8'),'NOTICE.md':readFileSync(path.join(root,'NOTICE.md'),'utf8')});
  }
  const written=install(files,options);
  console.log(`${options.dryRun?'Would write':'Wrote'} ${written.length} files to ${options.outDir}`);
- if(options.command==='ghostty') console.log(`Add this to your Ghostty configuration:\ncustom-shader = ${JSON.stringify(path.resolve(options.outDir,'blackhole.glsl'))}\ncustom-shader-animation = true`);
+ if(options.command==='ghostty') console.log(`Add this to your Ghostty configuration:\nbackground-opacity = 1\nalpha-blending = native\ncustom-shader = ${JSON.stringify(path.resolve(options.outDir,'blackhole-scene.glsl'))}\ncustom-shader = ${JSON.stringify(path.resolve(options.outDir,'blackhole-analysis.glsl'))}\ncustom-shader = ${JSON.stringify(path.resolve(options.outDir,'blackhole.glsl'))}\ncustom-shader-animation = true`);
 }
 if(process.argv[1] && realpathSync(process.argv[1])===fileURLToPath(import.meta.url))try{main();}catch(error){console.error(`blackhole: ${error.message}`);process.exitCode=1;}

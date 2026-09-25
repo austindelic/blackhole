@@ -1,9 +1,11 @@
+import { execFileSync } from 'node:child_process';
 import { readFile, writeFile, mkdir, readdir, cp } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import '../../blackhole/scripts/embed.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url));
 const source=path.resolve(root,'../blackhole');
+execFileSync(process.execPath,[path.resolve(root,'../../integrations/ghostty/scripts/generate.mjs'),'--check'],{stdio:'inherit'});
 const files={};
 async function collect(dir){for(const entry of await readdir(path.join(source,dir),{withFileTypes:true})){const rel=path.posix.join(dir,entry.name);if(entry.isDirectory()) await collect(rel);else files[rel]=rel.endsWith('.woff2')?{base64:(await readFile(path.join(source,rel))).toString('base64')}:await readFile(path.join(source,rel),'utf8');}}
 for(const dir of ['src','shaders','fonts']) await collect(dir);
@@ -17,7 +19,7 @@ await mkdir(path.join(root,'templates'),{recursive:true});
 await writeFile(path.join(root,'templates/source.json'),JSON.stringify(files));
 // The site task owns the integration; require it for release builds.
 await mkdir(path.join(root,'integrations/ghostty'),{recursive:true});
-const integration=path.resolve(root,'../../integrations/ghostty/blackhole.glsl');
-await cp(integration,path.join(root,'integrations/ghostty/blackhole.glsl'));
+const integration=path.resolve(root,'../../integrations/ghostty');
+for(const name of ['blackhole-scene.glsl','blackhole-analysis.glsl','blackhole.glsl','DepartureMono-OFL-1.1.txt','README.md']) await cp(path.join(integration,name),path.join(root,'integrations/ghostty',name));
 await cp(path.join(source,'LICENSE'),path.join(root,'LICENSE'));
 await cp(path.join(source,'NOTICE.md'),path.join(root,'NOTICE.md'));

@@ -73,7 +73,7 @@ See the [renderer](crates/renderer/README.md), [Ratatui widget](crates/ratatui/R
 npx @austindelic/blackhole-cli ghostty --out-dir ghostty
 ```
 
-The command exports a readable animated background and prints configuration instructions. It does not change your active terminal configuration. Ghostty uses a lightweight adaptation, rather than the full multipass renderer; see its [integration guide](integrations/ghostty/README.md).
+The command exports a readable animated background and prints configuration instructions. It does not change your active terminal configuration. Ghostty uses the canonical physical trace and Departure Mono ASCII glyphs through three ordered shader passes; see its [integration guide](integrations/ghostty/README.md).
 
 ## One source, several surfaces
 

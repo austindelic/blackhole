@@ -1,0 +1,6 @@
+{
+  "packages/blackhole/fonts/DepartureMono-Regular.woff2": "5b4fed1daa90708aa9c6ee1190abca9dc22164a1c1def0020386e46b61038cfb",
+  "packages/blackhole/src/components/BlackHoleCore.ts": "2b9e65a36e4dc21abcb4fc56dfbc9456058f1960cb238843b1e8485cf31d3a13",
+  "packages/blackhole/src/lib/ascii-analysis.ts": "fa3f2c8156eecd52f43f050b0230dd4f84024b02704745d7058dd951fe987d6c",
+  "packages/blackhole/routes.json": "b4af33a109af05941f56657f7d7fe5b23d14a99d808aea1f5b5e6256d99f783e"
+}
