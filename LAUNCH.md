@@ -1,5 +1,17 @@
 # Public launch checklist
 
+## Published status (2026-09-25)
+
+Blackhole 0.1.0 is public on npm and crates.io, with all seven npm archives, three Cargo archives, checksums and corresponding source attached to [v0.1.0](https://github.com/austindelic/blackhole/releases/tag/v0.1.0). [Five-platform build and installed-package verification](https://github.com/austindelic/blackhole/actions/runs/36092632672) passed at tagged commit `6c8f6ef`. Fresh registry consumers verified the source installer, Ghostty export, native explorer, and both Rust API examples without the original repository.
+
+[blackhole.austindelic.com](https://blackhole.austindelic.com) and [austindelic.com](https://austindelic.com) are live on Workers Static Assets. Production browser flows passed. The original repository is now [portfolio](https://github.com/austindelic/portfolio); the recreated [profile repository](https://github.com/austindelic/austindelic) contains presentation assets. The terminal portfolio's separate 1.0.2 rollout is tracked in its release workflow.
+
+npm trusted publishing is configured for this repository, `release.yml`, environment `release`. Initial Cargo publication used local authentication; future CI Cargo publication still requires the documented `CARGO_REGISTRY_TOKEN` secret. Historical authentication and name-availability observations below describe the prelaunch audit, not current availability.
+
+A same-host Apple M5 comparison of the preserved renderer and published crate matched all 4,800 glyph/color cells at the sampled frame. Matched 12-second runs measured 58.06 and 58.47 FPS respectively; this bounded check does not establish a speedup or parity for every setting. Ghostty shaders compile and their isolated configuration validates, but actual application visual inspection remains unverified because application access was unavailable. No active terminal configuration was changed.
+
+The remaining sections retain the migration audit and repeatable release procedure.
+
 ## Evidence and ownership (2026-09-25)
 
 The implementation snapshot is portfolio commit `0013008`, based on the active `cdfefe4` checkout plus its uncommitted user work. Upstream main is `590531f771958e2775da1f8e0b4f79efe93fdb2f`. `release/snapshot-delta.json` records exact changed blob IDs and paths between those snapshots. Original working files were never modified during this audit.
