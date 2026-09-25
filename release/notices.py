@@ -20,14 +20,15 @@ for pkg in sorted(metadata['packages'], key=lambda p: (p['name'], p['version']))
     files = sorted({f for p in candidates for f in ([p] if p.is_file() else p.rglob('*')) if f.is_file()})
     if not files:
         catalog = Path(__file__).parent / 'licenses/cargo/sources.json'
-        entries = json.loads(catalog.read_text()).get(f"{pkg['name']}-{pkg['version']}")
+        entries = json.loads(catalog.read_text(encoding='utf-8')).get(f"{pkg['name']}-{pkg['version']}")
         if not entries:
             raise SystemExit(f"Missing dependency license text: {pkg['name']} {pkg['version']}")
         for source in entries['sources']:
             file = catalog.parent / source['file']
-            parts.append(f"\n### {file.name}\n\nSource: {source['url']}\n\n```text\n{file.read_text()}\n```\n")
+            parts.append(f"\n### {file.name}\n\nSource: {source['url']}\n\n```text\n{file.read_text(encoding='utf-8')}\n```\n")
         continue
     for file in files:
-        parts.append(f'\n### {file.relative_to(root)}\n\n```text\n{file.read_text(errors="replace")}\n```\n')
+        parts.append(f'\n### {file.relative_to(root).as_posix()}\n\n```text\n{file.read_text(encoding="utf-8", errors="replace")}\n```\n')
 Path('artifacts').mkdir(exist_ok=True)
-Path('artifacts/DEPENDENCY_NOTICES.md').write_text('\n'.join(parts))
+with Path('artifacts/DEPENDENCY_NOTICES.md').open('w', encoding='utf-8', newline='\n') as output:
+    output.write('\n'.join(parts))
